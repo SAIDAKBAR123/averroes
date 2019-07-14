@@ -37,9 +37,7 @@
     <v-flex md6 sm12 xs12>
       <v-card full-height flat tile>
      <v-flex xs12 md12>
-       <video id="bgvid" playsinline autoplay muted loop>
-<source src="../assets/video/alow.mp4" type="video/mp4">
-</video>
+      
      </v-flex>
       </v-card>
     </v-flex>
