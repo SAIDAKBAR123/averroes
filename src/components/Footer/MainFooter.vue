@@ -119,9 +119,77 @@
 </template>
 
 <script>
-export default {
 
-}
+export default {  
+    data () {
+      return {
+      name: '',
+      email: '',
+      subject:'',
+      message:'',
+      address:
+        {
+          road:'Uzbekistan, Tashkent City ,Chilanzar 7 quarter, Muqimiy st, 160',
+          tel:'(97) 770 99 25',
+          contact_links:'info@averroes.uz'
+      }
+    ,
+    dictionary: {
+        attributes: {
+          email: 'E-mail Address'
+          // custom attributes
+        },
+        custom: {
+          name: {
+            required: () => 'Name can not be empty',
+            max: 'The name field may not be greater than 10 characters'
+            // custom messages
+          },
+          select: {
+            required: 'Select field is required'
+          }
+        }
+      },
+      icons: [
+        'home',
+        'mail',
+        'event',
+        'delete',
+      ],
+      items: [
+        'default',
+        'absolute',
+        'fixed',
+      ],
+      padless: false,
+      variant: 'default',
+    }
+    },
+
+
+    computed: {
+      localAttrs () {
+        const attrs = {}
+
+        if (this.variant === 'default') {
+          attrs.absolute = false
+          attrs.fixed = false
+        } else {
+          attrs[this.variant] = true
+        }
+        return attrs
+      },
+    },
+      mounted () {
+      this.$validator.localize('en', this.dictionary)
+    },
+     methods: {
+      submit () {
+        this.$validator.validateAll()
+      }
+    }
+  }
+
 </script>
 
 <style>

@@ -1,0 +1,63 @@
+
+/*------------Font style----------------*/
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Comfortaa|Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Courgette|Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Playball&display=swap&subset=cyrillic,latin-ext');
+
+.overlays{
+background-color:rgba(0, 0, 0, 0.199);
+
+}
+.title_font{
+ font-family: 'Comfortaa', cursive;
+
+}
+
+.title_beauty{
+  font-family: 'Cinzel', serif;
+}
+.title_dance{
+font-family: 'Tangerine', cursive;
+font-size: 2rem;
+
+}
+.title_dance_big{
+  font-family: 'Tangerine', cursive;
+  font-size: 3rem;
+  
+  }
+.title_playball{
+  font-family: 'Playball', cursive;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+
+}
+.title_mplus{
+
+font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+
+/*------------Events----------------*/
+.clickable{
+    cursor: pointer;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(117, 116, 116); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(110, 110, 110); 
+  }

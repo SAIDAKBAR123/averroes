@@ -99,7 +99,7 @@ module.exports = {
             }
         ],
         'line-comment-position': 'error',
-        // 'linebreak-style': [
+         'linebreak-style': 0,
         //     'warn',
         //     'windows'
         // ],
