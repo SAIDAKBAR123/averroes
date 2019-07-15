@@ -34,14 +34,7 @@
 
   <v-card flat tile class="mt-5 mb-5">
   <v-layout  row wrap>
-    <v-flex md6 sm12 xs12>
-      <v-card full-height flat tile>
-     <v-flex xs12 md12>
-      
-     </v-flex>
-      </v-card>
-    </v-flex>
-    <v-flex md6 sm12 xs12>
+    <v-flex md12 sm12 xs12 offset-(xs)(1)>
        <v-card flat  tile>
           <v-flex xs12 sm12 md12>
                <v-layout
@@ -51,7 +44,7 @@
             <h1 class="title_beauty p-2 text-xs-center" style="color:#c7b3a2">We are always ahead</h1>
             <h2 class="title_beauty  text-xs-center">Professional solutions for your business.</h2>
             <div class="mr-4 title_dance  text-xs-center col"><p>We provide premium customer support and offer affiliate programs.</p>
-             <hr class="deep-black accent-2 mt-0 d-inline-block mx-auto" style="width: 40%;">
+             <hr class="grey darken-3 accent-2 mt-0 d-inline-block mx-auto" style="width: 10%;">
             </div>
          
           </v-layout>
@@ -59,7 +52,20 @@
        
          </v-card>
     </v-flex>
-  </v-layout>
+    </v-layout>
+    <v-layout row wrap justify-center align-center>
+    <v-flex  md4 sm6 xs12 v-for="item in intro" :key="item.icon">
+      
+        <v-card  flat  tile >
+         <v-card-title dark primary class="justify-center icon_big title"><i  :class="item.icon"></i></v-card-title>
+            <v-card-title dark primary class="justify-center icons title_font">{{item.title}}</v-card-title>
+          <v-card-text class="text-center px-5 title_mplus">{{item.text}}</v-card-text>
+        </v-card>
+
+    </v-flex>
+    </v-layout>
+  
+
   <v-layout align-center justify-center row wrap>
     <v-flex md3 xs12 lg3 sm6>
        <v-card  height="300 " tile flat color="rgb(233, 231, 231)" dark >
@@ -145,6 +151,23 @@ PartnerList,
              text:'Consulting & Investment'
           }
         ],
+        intro:[
+          {
+          icon:'fas fa-coins',
+          title:'Market Forecasting',
+          text:'Market-leading experience and services Internal accounting & sales data, in addition to external market and economic indicators'
+          },
+              {
+          icon:'fas fa-chart-bar',
+          title:'Financial Modeling',
+          text:'Market-leading experience and services Internal accounting & sales data, in addition to external market and economic indicators'
+         },
+              {
+          icon:'fas fa-stopwatch',
+          title:'Financial Analysis',
+          text:'Market-leading experience and services Internal accounting & sales data, in addition to external market and economic indicators'
+          }
+        ]
       }
       }
       }
@@ -155,8 +178,12 @@ PartnerList,
 
 .icons i{
   font-size: 3rem;
- 
 
+}
+.icon_big i{
+ 
+  color:rgb(211, 211, 211);
+font-size: 5rem;
 }
 </style>
 
