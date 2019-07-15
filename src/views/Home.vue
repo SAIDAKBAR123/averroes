@@ -61,11 +61,18 @@
     </v-flex>
   </v-layout>
   <v-layout align-center justify-center row wrap>
+    <v-flex md3 xs12 lg3 sm6>
+       <v-card  height="300 " tile flat color="rgb(233, 231, 231)" dark >
+            <v-card-title dark primary class="justify-center icons title"><i style="color:grey" class="fas fa-university"></i></v-card-title>
+            <h4 class="black--text text-xs-center title_font">Investment Banking</h4>
+            <v-card-text dark class="black--text text-xs-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur perspiciatis aperiam veritatis nobis amet, molestiae nisi, nesciunt rerum architecto nulla expedita in id impedit praesentium, adipisci mollitia. Nisi, asperiores exercitationem.</v-card-text>
+          </v-card>
+    </v-flex>
  <v-flex md3 xs12 lg3 sm6 v-for="item  in color" :key="item.color"  >
           <v-card  height="300 " tile flat :color="item.color" dark >
-            <v-card-title dark primary class="justify-center icons title"><i :class="item.icon"></i></v-card-title>
+            <v-card-title dark primary class="justify-center icons title"><i :style="'color:'+item.icon_color" :class="item.icon"></i></v-card-title>
             <h4 class="text-xs-center title_font">{{item.title}}</h4>
-            <v-card-text dark class="text-xs-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur perspiciatis aperiam veritatis nobis amet, molestiae nisi, nesciunt rerum architecto nulla expedita in id impedit praesentium, adipisci mollitia. Nisi, asperiores exercitationem.</v-card-text>
+            <v-card-text dark class=" text-xs-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur perspiciatis aperiam veritatis nobis amet, molestiae nisi, nesciunt rerum architecto nulla expedita in id impedit praesentium, adipisci mollitia. Nisi, asperiores exercitationem.</v-card-text>
           </v-card>
   </v-flex>
   </v-layout>
@@ -101,24 +108,22 @@ PartnerList,
 
         color:[
           {
-            icon:'fas fa-university',
-            color:'#fafafa',
-            title:'Investment Banking'
-            },
-          {
           icon:'fas fa-funnel-dollar',
           color:'#c7b3a2',
-           title:'Sales & Trading'
+           title:'Sales & Trading',
+           icon_color:'white'
           },
           {
             icon:'fas fa-business-time',
             color:'#2b2c30',
-             title:'Investment Management'
+             title:'Investment Management',
+             icon_color:'white'
             },
           {
             icon:'fas fa-money-check-alt',
             color:'#222326',
-            title:'Market Research'
+            title:'Market Research',
+            icon_color:'white'
             }
         ],
 
@@ -150,7 +155,8 @@ PartnerList,
 
 .icons i{
   font-size: 3rem;
-  color: rgb(172, 172, 172)
+ 
+
 }
 </style>
 

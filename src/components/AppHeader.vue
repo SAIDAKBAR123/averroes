@@ -29,16 +29,13 @@
           </v-list-tile>
 <v-divider/>
    <v-list-tile >
-       <v-list-tile-action>
-            </v-list-tile-action>
+      
            <v-list-tile-content>
        <v-list-tile-title  >Russian</v-list-tile-title>
            </v-list-tile-content>
         </v-list-tile>
 
 <v-list-tile>
-        <v-list-tile-action >
-            </v-list-tile-action>
             <v-list-tile-content>
                <v-list-tile-title >English</v-list-tile-title>
             </v-list-tile-content>
@@ -49,7 +46,7 @@
 
      <v-toolbar  inverted-scroll
  height="74" dark flat app>
- 
+
         <v-toolbar-side-icon dark @click.stop="drawer=!drawer" class="hidden-md-and-up"></v-toolbar-side-icon> 
       <v-toolbar-title class="mt-2">
          <span class="clickable" v-on:click="pushing"><img src="../assets/img/logo_dark.svg" width="200" alt=""></span>

@@ -61,3 +61,12 @@ font-family: 'M PLUS Rounded 1c', sans-serif;
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(110, 110, 110); 
   }
+ /*-----backgrounds----------*/
+ .contacts{
+   background-image: url('../img/contact.jpg');
+   background-size:cover;
+ }
+ .service{
+  background-image: url('../img/service_test.jpg');
+  background-size:cover;
+ }

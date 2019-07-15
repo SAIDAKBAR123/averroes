@@ -6,27 +6,38 @@
             column
             align-center
             justify-center
-            class="white--text"
+            class="overlays white--text"
           >
     
-            <h1 class="white--text mb-2 display-1 text-xs-center">Course</h1>
+            <h1 class="white--text mb-2 title_font text-xs-center">Course</h1>
             <div class="headline mb-3 text-xs-center">
-                <v-breadcrumbs :items="items">
+                <v-breadcrumbs dark :items="items">
       <template v-slot:divider>
-        <v-icon>chevron_right</v-icon>
+        <v-icon>keyboard_arrow_right</v-icon>
       </template>
     </v-breadcrumbs>
             </div>
           
           </v-layout>
         </v-parallax>
-        <v-container>
-            <v-layout>
-                <v-flex>
-                    <h2>hello courses</h2>
-                </v-flex>
-            </v-layout>
-        </v-container>
+          <v-layout row wrap justify-center>
+              <v-card flat  tile>
+          <v-flex xs12 sm12 md12>
+               <v-layout
+               dark
+            column
+          >
+            <h1 class="title_beauty p-2 text-xs-center" style="color:#c7b3a2">We are always ahead</h1>
+            <h2 class="title_beauty  text-xs-center">Professional solutions for your business.</h2>
+            <div class="mr-4 title_dance  text-xs-center col"><p>We provide premium customer support and offer affiliate programs.</p>
+             <hr class="deep-black accent-2 mt-0 d-inline-block mx-auto" style="width: 40%;">
+            </div>
+         
+          </v-layout>
+          </v-flex>
+       
+         </v-card>
+        </v-layout>
     </div>
 </template>
 
