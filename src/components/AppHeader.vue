@@ -64,6 +64,15 @@
           
           </v-list-tile>
            <v-spacer></v-spacer>
+           <v-list-tile v-for="item in social" :key="item.type" 
+            
+            >
+             
+                <v-list-tile-title v-on:click="redirecting(item.link)" >
+           <i style="font-size:1.5rem" :class="item.icon"></i>
+                </v-list-tile-title>
+            
+           </v-list-tile>
     </v-toolbar>
 
     <!--NAvigation drawer-->
@@ -75,12 +84,32 @@
 export default {
 data(){
   return{
-    drawer:false
+    drawer:false,
+    social:[
+      {
+        type:'Instagram',
+        link:'http://instagram.com/averroes.consulting/',
+        icon:'fab fa-instagram'
+      },
+       {
+        type:'Telegram',
+        link:'https://t.me/averroes_consulting',
+        icon:'fab fa-telegram'
+      },
+     { 
+       type:'Facebook',
+       link:'example.com',
+       icon:"fab fa-facebook-f"
+     }
+    ]
   }
 },
 methods: {
   pushing(){
     this.$router.push('/')
+  },
+  redirecting(link){
+  window.open(link,'_blank')
   }
 },
  computed:{

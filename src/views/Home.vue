@@ -3,7 +3,7 @@
 
 
   <v-carousel height="540"  reverse-transition="fade"
-      transition="fadeOut"
+      transition="fadeIn"
      
       delimiter-icon
       hide-delimiters

@@ -6,7 +6,6 @@
         fixed
         hide-overlay
          temporary
-        
        app
         
       >
@@ -30,17 +29,22 @@
             </v-list-tile-content>
           </v-list-tile>
 <v-divider/>
+   <v-list-tile v-for="item in social" :key="item.type" 
+            >
+                <v-list-tile-title v-on:click="redirecting(item.link)" >
+           <i style="font-size:1.5rem" :class="item.icon"></i>
+                </v-list-tile-title>
+            
+           </v-list-tile>
    <v-list-tile >
-       <v-list-tile-action>
-            </v-list-tile-action>
+      
            <v-list-tile-content>
        <v-list-tile-title  >Russian</v-list-tile-title>
            </v-list-tile-content>
         </v-list-tile>
 
 <v-list-tile>
-        <v-list-tile-action >
-            </v-list-tile-action>
+      
             <v-list-tile-content>
                <v-list-tile-title >English</v-list-tile-title>
             </v-list-tile-content>
@@ -67,6 +71,15 @@
            
           </v-list-tile>
           <v-spacer></v-spacer>
+           <v-list-tile v-for="item in social" :key="item.type" 
+            
+            >
+             
+                <v-list-tile-title v-on:click="redirecting(item.link)" >
+           <i style="font-size:1.5rem; color:white;" :class="item.icon"></i>
+                </v-list-tile-title>
+            
+           </v-list-tile> 
     </v-toolbar>
 
      <app-header/>
@@ -96,12 +109,32 @@ export default {
         '254 Street Avenue, Los Angeles, LA 2415 US.',
        'Mon - Fri : 09:00 - 17:00',
         '+998 (90) 574-34-23',
-      ]
+      ],
+       social:[
+      {
+        type:'Instagram',
+        link:'http://instagram.com/averroes.consulting/',
+        icon:'fab fa-instagram'
+      },
+       {
+        type:'Telegram',
+        link:'https://t.me/averroes_consulting',
+        icon:'fab fa-telegram'
+      },
+     { 
+       type:'Facebook',
+       link:'example.com',
+       icon:"fab fa-facebook-f"
+     }
+    ]
     }
   },
   methods:{
  pushing(){
     this.$router.push('/')
+  },
+   redirecting(link){
+  window.open(link,'_blank')
   }
   },
   computed:{
