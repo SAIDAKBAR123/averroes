@@ -1,14 +1,11 @@
 <template>
-<div>
+<div >
 
-
-  <v-carousel height="540"  reverse-transition="fade"
+  <v-carousel :height="totalHeight"  reverse-transition="fade"
       transition="fadeIn"
-     
       delimiter-icon
       hide-delimiters
       >
-
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
@@ -104,6 +101,14 @@
 import TeamList from '../components/Shared/TeamList.vue'
 import PartnerList from '../components/Shared/PartnerList.vue'
   export default {
+    computed:{
+    totalHeight(){
+      let x =  screen.availHeight 
+      x=parseInt(x)-100;
+      console.log(x)
+      return x 
+   }
+  },
     components:{
 TeamList,
 PartnerList,
@@ -111,7 +116,7 @@ PartnerList,
     
     data () {
       return {
-
+       
         color:[
           {
           icon:'fas fa-funnel-dollar',
@@ -185,5 +190,6 @@ PartnerList,
   color:rgb(211, 211, 211);
 font-size: 5rem;
 }
+
 </style>
 

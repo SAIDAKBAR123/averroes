@@ -1,88 +1,49 @@
 <template>
-  <v-app>
-      <v-navigation-drawer
-       class="back-drawer"
-        v-model="drawer" 
-        fixed
-        hide-overlay
-         temporary
-       app
-        
-      >
-        <v-list >
-       <v-list-tile-content >
-              <span class="clickable px-4" v-on:click="pushing"><img  width="200" src="@/assets/img/logo.svg"></span>
-             </v-list-tile-content>
-        </v-list>
-  
-        <v-list fixed class="pt-0">
-          <v-divider></v-divider>
-  
-          <v-list-tile
-         
-          v-for="(item ,i) in menuList" :key="i"
-          :to="item.route"
-           >
-  
-            <v-list-tile-content>
-              <v-list-tile-title class="title_font text-uppercase">{{item.title}}</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-<v-divider/>
-   <v-list-tile v-for="item in social" :key="item.type" 
-            >
-                <v-list-tile-title v-on:click="redirecting(item.link)" >
-           <i style="font-size:1.5rem" :class="item.icon"></i>
-                </v-list-tile-title>
-            
-           </v-list-tile>
-   <v-list-tile >
-      
-           <v-list-tile-content>
-       <v-list-tile-title  >Russian</v-list-tile-title>
-           </v-list-tile-content>
-        </v-list-tile>
+  <v-app id="inspire">
+    <v-toolbar dense absolute color="transparent" dark flat>
+    <v-toolbar-items class="hidden-sm-and-down">
+    
+             <div class="row ">
+                <div class="rombo" v-for="i in address" :key="i.title">
+                <div class="row">
+                  <v-icon class="mt-0 pl-1 ml-3" style="font-size:1.4rem;">{{i.icon}}</v-icon>
+                 <p class="mx-1 my-3 title_mplus" style="font-size:0.9rem;">{{i.title}}</p>
+                 </div>
+                 
+                </div>
+              
+             </div>
+       
+    
+    </v-toolbar-items>
+  </v-toolbar>
 
-<v-list-tile>
-      
-            <v-list-tile-content>
-               <v-list-tile-title >English</v-list-tile-title>
-            </v-list-tile-content>
-        </v-list-tile>
-     
-        </v-list>
-      </v-navigation-drawer>
-      <!--toolbar main-->
-   <v-toolbar  temporary  color="transparent" flat app>
-      <v-toolbar-side-icon dark color="transparent" @click.stop="drawer=!drawer" class="hidden-md-and-up"></v-toolbar-side-icon> 
-      <v-toolbar-title justify-center class="mt-3">
+   <v-toolbar height="200" absolute flat
+ color="transparent" app fixed>
+       <v-toolbar-title dark justify-center class="mt-3 hidden-sm-and-down">
        <span class="clickable" v-on:click="pushing"><img src="@/assets/img/logo_dark.svg" width="200" alt=""></span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
      <v-list-tile
-         class="hidden-sm-and-down"
+         class=" hidden-sm-and-down"
           v-for="(item ,i) in menuList" :key="i"
           :to="item.route"
            >
-  
-            <v-list-tile-content>
-              <v-list-tile-title class="white--text text-uppercase">{{item.title}} /</v-list-tile-title>
-            </v-list-tile-content>
-           
+            <v-toolbar-items>
+        <v-btn dark round flat class="title_font">{{item.title}}</v-btn>
+            </v-toolbar-items>
           </v-list-tile>
           <v-spacer></v-spacer>
            <v-list-tile v-for="item in social" :key="item.type" 
-            
-            >
-             
-                <v-list-tile-title v-on:click="redirecting(item.link)" >
-           <i style="font-size:1.5rem; color:white;" :class="item.icon"></i>
-                </v-list-tile-title>
-            
+             class="hidden-sm-and-down"
+             v-on:click="redirecting(item.link)"
+            >      
+           <i style="font-size:1.5rem; color:white;" :class="item.icon"></i>  
            </v-list-tile> 
     </v-toolbar>
 
-     <app-header/>
+     <app-header/> 
+
     <v-content>
         <transition name="slide" mode="out-in">
       <router-view/>
@@ -97,6 +58,7 @@
 import AppHeader from './components/AppHeader.vue'
 import MainFooter from './components/Footer/MainFooter.vue'
 export default {
+  
   components:{
     AppHeader,
     MainFooter,
@@ -126,7 +88,21 @@ export default {
        link:'example.com',
        icon:"fab fa-facebook-f"
      }
-    ]
+    ],
+      address:[
+          {
+            title:' 254 Street Avenue, Los Angeles, LA 2415 US.',
+            icon :'room'
+          },
+          {
+            title:' Mon - Fri : 09:00 - 17:00',
+            icon :'watch'
+          },
+          {
+            title:' 8 800 256 35 87',
+            icon :'call'
+          }
+        ]
     }
   },
   methods:{
@@ -168,6 +144,7 @@ export default {
                 route: '/contacts'
             }
         ]
+          
     }
 }
 }
@@ -204,7 +181,16 @@ animation: slide-out 400ms ease-out forwards;
     transform:translateY(-30px);
     opacity:0;
   }
+  
 }
+#inspire {
+  height: 100vh;
+}
+.rombo{
+  width: 62vh;
+ border-right: 0.5px solid rgb(85, 85, 85);
+  border-bottom: 0.5px solid rgb(85, 85, 85);
 
+}
 </style>
 

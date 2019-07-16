@@ -65,13 +65,13 @@
           </v-list-tile>
            <v-spacer></v-spacer>
            <v-list-tile v-for="item in social" :key="item.type" 
-            
+             class="hidden-sm-and-down"
+             v-on:click="redirecting(item.link)" 
             >
              
-                <v-list-tile-title v-on:click="redirecting(item.link)" >
+              
            <i style="font-size:1.5rem" :class="item.icon"></i>
-                </v-list-tile-title>
-            
+               
            </v-list-tile>
     </v-toolbar>
 
