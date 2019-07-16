@@ -1,12 +1,13 @@
 <template>
   <v-app id="inspire">
-    <v-toolbar dense absolute color="transparent" dark flat>
+    <v-toolbar dense absolute color="transparent"  flat dark>
+   
     <v-toolbar-items class="hidden-sm-and-down">
-    
+   
              <div class="row ">
                 <div class="rombo" v-for="i in address" :key="i.title">
                 <div class="row">
-                  <v-icon class="mt-0 pl-1 ml-3" style="font-size:1.4rem;">{{i.icon}}</v-icon>
+                  <v-icon class="mt-0 pl-1 ml-4" style="font-size:1.4rem;">{{i.icon}}</v-icon>
                  <p class="mx-1 my-3 title_mplus" style="font-size:0.9rem;">{{i.title}}</p>
                  </div>
                  
@@ -15,7 +16,8 @@
              </div>
        
     
-    </v-toolbar-items>
+    </v-toolbar-items><v-spacer></v-spacer>
+     <v-toolbar-side-icon clipped-right></v-toolbar-side-icon> 
   </v-toolbar>
 
    <v-toolbar height="200" absolute flat
@@ -187,9 +189,9 @@ animation: slide-out 400ms ease-out forwards;
   height: 100vh;
 }
 .rombo{
-  width: 62vh;
- border-right: 0.5px solid rgb(85, 85, 85);
-  border-bottom: 0.5px solid rgb(85, 85, 85);
+  width: 350px;
+ border-right: 0.5px solid rgba(209, 208, 208, 0.411);
+  border-bottom: 0.5px solid rgba(202, 202, 202, 0.459);
 
 }
 </style>
