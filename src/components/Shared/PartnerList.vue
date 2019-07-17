@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div class="">
         <v-layout justify-center align-center row wrap>
                  <v-flex dark justify-center md12 xs12 offset-(md)(3) >
-                      <h1 class="title_font text-xs-center">Our Clients</h1>
-                       <div class="title_dance_big text-xs-center px-5 mx-5"><p>
-                           Perspiciatis unde omnis iste natus sit voluptatem accusantium dolorem
+                      <h1 class="title_beauty text-xs-center">Our Clients</h1>
+                       <div class="new_times text-xs-center px-5 mx-5"><p>
+                           Perspiciatis unde omnis iste natus sit voluptatem accusantium dolorem <br>
 laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
                            </p></div>
                   </v-flex>
@@ -17,15 +17,6 @@ laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
                    </v-container>
                   </v-flex>
         </v-layout>
-
-        <v-layout row wrap justify-center align-center>
-   <v-flex justify center md12 xs12>
- 
-            <h1 class="title_font  mb-2  text-xs-center">Contact Us</h1>
-            <div class="header  mb-3 text-xs-center">Be updated with events</div>
-  </v-flex>
-  
-</v-layout>
     </div>
 </template>
 

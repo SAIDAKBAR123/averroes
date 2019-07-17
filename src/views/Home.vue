@@ -11,7 +11,7 @@
       :key="i"
       :src="item.src"
     >
-    <div class="mask flex-center rgba-black-strong">
+    <div class="flex-center">
              <v-layout
             column
             align-center
@@ -29,7 +29,7 @@
    
   </v-carousel>
 
-  <v-card flat tile class="mt-5 mb-5">
+  <v-card flat tile class=" space_middle">
   <v-layout  row wrap>
     <v-flex md12 sm12 xs12 offset-(xs)(1)>
        <v-card flat  tile>
@@ -38,9 +38,9 @@
                dark
             column
           >
-            <h1 class="title_beauty p-2 text-xs-center" style="color:#c7b3a2">We are always ahead</h1>
-            <h2 class="title_beauty  text-xs-center">Professional solutions for your business.</h2>
-            <div class="mr-4 title_dance  text-xs-center col"><p>We provide premium customer support and offer affiliate programs.</p>
+            <h1 class="title_beauty p-2 text-xs-center" >We are always ahead</h1>
+           
+            <div class="mr-4 new_times text-xs-center col"><p>We provide premium customer support and offer affiliate programs.</p>
              <hr class="grey darken-3 accent-2 mt-0 d-inline-block mx-auto" style="width: 10%;">
             </div>
          
@@ -80,10 +80,11 @@
   </v-flex>
   </v-layout>
   </v-card>
+  
   <!--team list-->
-<v-layout>
+
  <team-list/>
-</v-layout>
+
 <!--Opinions about averroes -->
 <v-layout>
 <v-flex>
@@ -93,7 +94,7 @@
 <!-------Partner List ------>
 
   <partner-list/>
-
+<v-courses></v-courses>
 </div>
 </template>
 
@@ -144,15 +145,15 @@ PartnerList,
             text:'The Best Business Support'
                 },
                      {        
-            src: 'https://img.freepik.com/free-photo/young-student-looking-camera-sitting-university_7502-1107.jpg?size=626&ext=jpg',
+            src: 'http://invetex.themerex.net/wp-content/uploads/2016/04/slider_2.jpg',
              text:'The Investment on Time'
             },
           {
-              src: 'https://cdn.pixabay.com/photo/2018/03/14/08/55/business-3224643__340.jpg',
+              src: 'http://invetex.themerex.net/wp-content/uploads/2016/04/slider_3.jpg',
                text:'We have a Talanted Students'
           },
           {
-            src: 'https://akm-img-a-in.tosshub.com/indiatoday/images/story/201810/education4-650.jpeg?yKJu.SPOTMSwskwJTSiPGSPSit7gMJmt',
+            src: 'http://invetex.themerex.net/wp-content/uploads/2016/04/slider_1.jpg',
              text:'Consulting & Investment'
           }
         ],

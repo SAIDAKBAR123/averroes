@@ -10,6 +10,8 @@ import "@/assets/css/global.css"
 import YmapPlugin from 'vue-yandex-maps'
 import { yandexMap, ymapMarker } from 'vue-yandex-maps'
 
+import PopularCourses from './components/Shared/PopularCourses.vue'
+
 const settings = { 
   apiKey: '3A6238712318f251319073449f52d33e3e79f7a39527142bb18ccf99112f166f17',
   lang: 'ru_RU',
@@ -20,6 +22,7 @@ Vue.use(VeeValidate);
 Vue.config.productionTip = false
 Vue.component('y-map',yandexMap)
 Vue.component('y-mapMarker',ymapMarker)
+Vue.component('v-courses', PopularCourses)
 new Vue({
   router,
   store,

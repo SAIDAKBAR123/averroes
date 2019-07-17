@@ -1,6 +1,6 @@
 <template>
     <div class="">
-             <v-parallax class="contacts" height="300">
+             <v-parallax class="contacts" height="390">
          
           <v-layout
             column
@@ -148,12 +148,12 @@ data(){
       items: [
         {
           text: 'Home',
-          disabled: false,
+          disabled: true,
           href: '/'
         },
         {
           text: 'Contacts',
-          disabled: false,
+          disabled: true,
           href: 'contacts'
         },
       

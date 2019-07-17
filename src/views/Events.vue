@@ -1,12 +1,12 @@
 <template>
     <div>
-         <v-parallax class="top-banner" height="300">
+         <v-parallax class="top-banner" height="390">
          
           <v-layout
             column
             align-center
             justify-center
-            class="overlays white--text"
+            class="white--text"
           >
     
             <h1 class="white--text mb-2 title_font text-xs-center">Events</h1>
@@ -49,12 +49,12 @@ data(){
       items: [
         {
           text: 'Home',
-          disabled: false,
+          disabled:true,
           href: '/'
         },
         {
           text: 'Events',
-          disabled: false,
+          disabled: true,
           href: 'events'
         }
       ]

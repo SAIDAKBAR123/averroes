@@ -1,26 +1,30 @@
 <template>
   <v-app id="inspire">
-    <v-toolbar dense absolute color="transparent"  flat dark>
-   
-    <v-toolbar-items class="hidden-sm-and-down">
-   
-             <div class="row ">
+    
+    <v-toolbar  dense absolute color="transparent"  flat dark>
+      <v-toolbar-items class="hidden-sm-and-down" >
+    
+            <div class="row">
+               
                 <div class="rombo" v-for="i in address" :key="i.title">
                 <div class="row">
                   <v-icon class="mt-0 pl-1 ml-4" style="font-size:1.4rem;">{{i.icon}}</v-icon>
                  <p class="mx-1 my-3 title_mplus" style="font-size:0.9rem;">{{i.title}}</p>
                  </div>
-                 
                 </div>
-              
+               
              </div>
        
     
-    </v-toolbar-items><v-spacer></v-spacer>
-     <v-toolbar-side-icon clipped-right></v-toolbar-side-icon> 
-  </v-toolbar>
+  </v-toolbar-items>
+    <v-spacer></v-spacer>
+   
+   </v-toolbar>
 
-   <v-toolbar height="200" absolute flat
+<!-----------------right side navigation side bar----------------->
+ 
+
+   <v-toolbar height="180" absolute flat
  color="transparent" app fixed>
        <v-toolbar-title dark justify-center class="mt-3 hidden-sm-and-down">
        <span class="clickable" v-on:click="pushing"><img src="@/assets/img/logo_dark.svg" width="200" alt=""></span>
@@ -68,6 +72,9 @@ export default {
   name: 'App',
   data () {
     return {
+        mini: false,
+        right: null,
+    drawer_right:null,
       drawer:false,
       colors:[
         '254 Street Avenue, Los Angeles, LA 2415 US.',
@@ -158,6 +165,7 @@ font-family: 'Noto Sans', sans-serif;
 position: absolute;
 z-index: 10;
 }
+
 .slide-enter-active{
 animation: slide-in 400ms ease-out forwards;
 }
@@ -185,9 +193,7 @@ animation: slide-out 400ms ease-out forwards;
   }
   
 }
-#inspire {
-  height: 100vh;
-}
+
 .rombo{
   width: 350px;
  border-right: 0.5px solid rgba(209, 208, 208, 0.411);

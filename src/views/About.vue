@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-      <v-parallax class="top-banner" height="300">
+      <v-parallax class="top-banner" height="390">
          
           <v-layout
             column
@@ -30,19 +30,15 @@ export default {
        items: [
         {
           text: 'Home',
-          disabled: false,
+          disabled: true,
           href: '/'
         },
         {
           text: 'About',
           disabled: true,
           href: 'about'
-        },
-        {
-          text: 'state',
-          disabled: true,
-          href: ''
         }
+       
       ]
     }
   }
