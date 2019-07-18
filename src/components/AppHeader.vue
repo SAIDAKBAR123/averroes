@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="elevate">
      <v-navigation-drawer
        class="back-drawer"
         v-model="drawer" 
@@ -148,6 +148,8 @@ methods: {
 }
 </script>
 
-<style>
-
+<style scoped>
+.elevate{
+z-index: 10;
+}
 </style>

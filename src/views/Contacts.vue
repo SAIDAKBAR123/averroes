@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div>
              <v-parallax class="contacts" height="390">
          
           <v-layout
@@ -20,95 +20,51 @@
           
           </v-layout>
         </v-parallax>
-
-        <!--Section: Contact v.2-->
-<section class="text-center mb-5 px-5 mx-5 pb-5" >
-
-    <!--Section heading-->
-    <h2 class="title_font text-center my-4">Send Us a Message</h2>
-    <!--Section description-->
-    <p class="text-center title_playball w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-        a matter of hours to help you.</p>
-<hr class="stylish-color accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 10%;">
-    <div class="row">
-
-        <!--Grid column-->
-        <div class="col-md-12 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
-                <!--Grid row-->
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
-                            <label for="name" class="">Your name</label>
-                        </div>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
-                            <label for="email" class="">Your email</label>
-                        </div>
-                    </div>
-                    <!--Grid column-->
-
-                </div>
-                <!--Grid row-->
-
-                <!--Grid row-->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
-                            <label for="subject" class="">Subject</label>
-                        </div>
-                    </div>
-                </div>
-                <!--Grid row-->
-
-                <!--Grid row-->
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-12">
-
-                        <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message">Your message</label>
-                        </div>
-
-                    </div>
-                </div>
-                <!--Grid row-->
-            <div class="text-center">
-                <v-btn justify-center round large outline color="green" dark>Leave  a Reply</v-btn>
+  
+               <v-layout
+               dark
+            column
+          >
+            <h1 class="title_beauty pt-2 mt-5 text-xs-center" >Our Location</h1>
+          
+            <div class="mr-4 new_times text-xs-center col"><p>We provide premium customer support and offer affiliate programs.</p>
+             <hr class="grey darken-3 accent-2 mt-0 d-inline-block mx-auto" style="width: 10%;">
             </div>
-            </form>
+         
+          </v-layout>
 
-            <div class="status"></div>
-        </div>
-        <!--Grid column-->
+<v-layout class="space_middle" justify-center row wrap>
+  <v-flex md4 xs12 justify-start>
+    <v-card flat>
+      <v-card-title>
+        <h1 class="title_playball">Our Location </h1>
+      </v-card-title>
+      <v-card-text>
+      
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <h5 class="title_mplus">San Francisco, CA 94126, USA</h5>
+                </li>
 
-        <!--Grid column-->
-    
-        <!--Grid column-->
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <h5 class="title_mplus">+ 998 (99) 944 33 44</h5>
+                </li>
 
-    </div>
-
-</section>
-<!--Section: Contact v.2-->
-
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <h5 class="title_mplus">averroes@support.com</h5>
+                </li>
+            </ul>
+      
+      </v-card-text>
+    </v-card>
+  </v-flex>
+  <v-flex md4 xs12 justify-start>
         <y-map
   :coords="[41.294877250045,69.21974582265403]"
   zoom="14"
-  style="width: 100%; height: 300px;"
+  style="width: 100%; height:330px "
   :cluster-options="{
-    1: {clusterDisableClickZoom: false}
+    1: {clusterDisableClickZoom: true}
   }"
   :behaviors="['ruler']"
   
@@ -128,6 +84,9 @@
     ></y-mapMarker>
 
 </y-map>
+
+</v-flex>
+</v-layout>
     </div>
 </template>
 

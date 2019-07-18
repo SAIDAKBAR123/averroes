@@ -24,8 +24,8 @@
 <!-----------------right side navigation side bar----------------->
  
 
-   <v-toolbar height="180" absolute flat
- color="transparent" app fixed>
+   <v-toolbar  height="180" absolute flat
+ color="transparent" app fixed >
        <v-toolbar-title dark justify-center class="mt-3 hidden-sm-and-down">
        <span class="clickable" v-on:click="pushing"><img src="@/assets/img/logo_dark.svg" width="200" alt=""></span>
       </v-toolbar-title>

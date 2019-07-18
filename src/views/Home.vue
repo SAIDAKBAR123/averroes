@@ -95,6 +95,8 @@
 
   <partner-list/>
 <v-courses></v-courses>
+<v-gallery/>
+<v-sub-footer/>
 </div>
 </template>
 

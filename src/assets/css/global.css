@@ -49,7 +49,7 @@ font-size: 2rem;
 /*--- space middle ---*/
 .space_middle{
   padding-top: 50px;
-padding-bottom: 100px;
+padding-bottom: 50px;
 }
 .v-card--reveal {
   align-items: center;
@@ -90,3 +90,6 @@ padding-bottom: 100px;
   background-image: url('../img/service_test.jpg');
   background-size:cover;
  }
+
+ /*-------------animations--------------*/
+ 

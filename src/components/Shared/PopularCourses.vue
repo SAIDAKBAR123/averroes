@@ -60,13 +60,16 @@ laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
        <h3 class="pb-0 mb-0 title_dance">{{item.instructor}}</h3>
       </v-card-text>
       <v-divider></v-divider>
-      <v-card-footer justify-center >
-          <v-btn class="text-xs-center" round outline color="deep-orange lighten-4" >Continue</v-btn>
-      </v-card-footer>
+      <v-card-actions justify-center >
+          <v-btn class="text-xs-center" round outline color="deep-blue lighten-4" >Continue</v-btn>
+      </v-card-actions>
     </v-card>
   </v-hover>
 </v-flex>
 
+</v-layout>
+<v-layout class="mt-5" justify-center align-center>
+  <v-btn outline large round color="blue">View more...</v-btn>
 </v-layout>
     </div>
 </template>
