@@ -1,7 +1,7 @@
 <template>
 <div >
 
-  <v-carousel :height="totalHeight"  reverse-transition="fade"
+ <v-carousel  :height="totalHeight"  reverse-transition="fade"
       transition="fadeIn"
       delimiter-icon
       hide-delimiters
@@ -96,6 +96,7 @@
   <partner-list/>
 <v-courses></v-courses>
 <v-gallery/>
+<vue-instagram/>
 <v-sub-footer/>
 </div>
 </template>
@@ -103,6 +104,7 @@
 <script>
 import TeamList from '../components/Shared/TeamList.vue'
 import PartnerList from '../components/Shared/PartnerList.vue'
+import VueInstagram from '../components/Shared/VueInstagram.vue'
   export default {
     computed:{
     totalHeight(){
@@ -115,6 +117,7 @@ import PartnerList from '../components/Shared/PartnerList.vue'
     components:{
 TeamList,
 PartnerList,
+VueInstagram
     },
     
     data () {

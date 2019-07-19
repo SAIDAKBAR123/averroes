@@ -1,5 +1,5 @@
-<template>
-    <div style="background-color:#1c1b1f;">
+<template >
+    <div  style="background-color:#1c1b1f;">
 
   <!-- Footer Links -->
   <div class="container text-center text-md-left mt-5 pt-5">
@@ -53,53 +53,7 @@
         <!-- Links -->
         <h5 class="white--text text-uppercase font-weight-bold">Contact form</h5>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-      <v-card tile flat color="transparent" dark>
-        <form  class="dark">
-    <v-text-field
-     outline
-      v-model="name"
-      v-validate="'required|max:10'"
-      :counter="10"
-      :error-messages="errors.collect('name')"
-      label="Your Name"
-      data-vv-name="name"
-      prepend-inner-icon="perm_identity"
-      required
-    ></v-text-field>
-    <v-text-field
-     outline
-     color="blue"
-      v-model="email"
-      v-validate="'required|email'"
-      :error-messages="errors.collect('email')"
-      label="E-mail address"
-      data-vv-name="email"
-      prepend-inner-icon="mail"
-      required
-    ></v-text-field>
-     <v-text-field
-     v-model="subject"
-            outline
-            label="Subject"
-            prepend-inner-icon="subject"
-            data-vv-name="subject"
-          ></v-text-field>
-     <v-textarea
-          outline
-          v-model="message"
-          name="input-7-4"
-          data-vv-name="mesaage"
-          label="Outline textarea"
-          value="your message here..."
-        ></v-textarea>
     
-    <v-btn large @click="submit" color="green" outline round>Send message
-        <v-icon dark right>send</v-icon>
-      </v-btn>
-      
-    
-  </form>
-  </v-card>
       </div>
       <!-- Grid column -->
 

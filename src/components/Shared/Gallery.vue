@@ -19,12 +19,14 @@
             </v-card>
           </v-flex>
           <v-flex grow  align-center >
+          
   <carousel-3d>
-    <slide v-for="i in 7" :key="i" :index="i">
-     <v-card flat tile class="d-flex">
+       
+    <slide v-for="i in 5"  :key="i" :index="i">
+   <v-card flat tile class="d-flex">
                 <v-img
                   :src="`https://picsum.photos/500/300?image=${i * 5 + 10}`"
-                  :lazy-src="`https://picsum.photos/10/6?image=${i * 5 + 10}`"
+                  :lazy-src="`https://picsum.photos/500/300?image=${i * 5 + 10}`"
                   aspect-ratio="1"
                   class="grey lighten-2"
                 >
@@ -40,12 +42,14 @@
                   </template>
                 </v-img>
               </v-card>
-    </slide>
-   
+               </slide>
+ 
   </carousel-3d>
+
           </v-flex>
 
       </v-layout>
+      
     </div>
 </template>
 

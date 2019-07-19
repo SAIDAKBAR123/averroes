@@ -11,7 +11,7 @@ import "@/assets/mainJS/main"
 import YmapPlugin from 'vue-yandex-maps'
 import { yandexMap, ymapMarker } from 'vue-yandex-maps'
 import Carousel3d from 'vue-carousel-3d';
-
+import VueInstagram from 'vue-instagram'
 import PopularCourses from './components/Shared/PopularCourses.vue'
 import Gallery from './components/Shared/Gallery.vue'
 import SubFooter from './components/Footer/SubFooter.vue'
@@ -24,6 +24,7 @@ const settings = {
 Vue.use(YmapPlugin, settings)
 Vue.use(VeeValidate);
 Vue.use(Carousel3d);
+Vue.use(VueInstagram)
 
 Vue.config.productionTip = false
 Vue.component('y-map',yandexMap)

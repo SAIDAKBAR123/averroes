@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
     
-    <v-toolbar  dense absolute color="transparent"  flat dark>
+   <v-toolbar  dense absolute color="transparent"  flat dark>
       <v-toolbar-items class="hidden-sm-and-down" >
     
             <div class="row">
@@ -17,7 +17,7 @@
        
     
   </v-toolbar-items>
-    <v-spacer></v-spacer>
+
    
    </v-toolbar>
 
@@ -160,11 +160,7 @@ export default {
 </script>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i&display=swap&subset=greek,latin-ext');
-.font{
-font-family: 'Noto Sans', sans-serif;
-position: absolute;
-z-index: 10;
-}
+
 
 .slide-enter-active{
 animation: slide-in 400ms ease-out forwards;
