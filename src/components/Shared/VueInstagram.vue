@@ -25,9 +25,10 @@
     
 </vue-instagram>
  </v-flex>
-      <!--<div class="elfsight-app-081b7506-5c93-422d-98f7-f982c0025854"></div>-->
+     
     </v-layout>
   </v-container>
+   <div class="elfsight-app-081b7506-5c93-422d-98f7-f982c0025854"></div>
   </div>
 </template>
 
