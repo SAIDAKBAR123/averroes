@@ -47,6 +47,11 @@ export default new Router({
       path: '/services',
       name: 'services',  
       component: () => import('./views/Services.vue')
+    },
+    {
+      path: '/courses/:id',
+      name: 'courses',  
+      component: () => import('./components/Reusable/Definition.vue')
     }
   ]
 })

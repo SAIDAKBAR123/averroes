@@ -5,6 +5,8 @@
       transition="fadeIn"
       delimiter-icon
       hide-delimiters
+      next-icon="navigate_next"
+      prev-icon="navigate_before"
       >
     <v-carousel-item
       v-for="(item,i) in items"

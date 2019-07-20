@@ -1,5 +1,5 @@
 <template>
-  <div class="space_middle">
+  <div v-show="false" class="space_middle">
      <v-layout  justify-center row wrap>
     <v-flex md12 sm12 xs12 offset-(xs)(1)>
        <v-card flat  tile>

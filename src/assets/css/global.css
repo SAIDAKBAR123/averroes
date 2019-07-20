@@ -4,10 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Courgette|Tangerine&display=swap');
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p|Quicksand:400,500&display=swap&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500&display=swap&subset=latin-ext');
-.overlays{
-background-color:rgba(0, 0, 0, 0.199);
-
-}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap');
 .title_font{
  font-family: 'Comfortaa', cursive;
 
@@ -46,6 +43,10 @@ font-size: 2rem;
   font-style: italic;
   color:rgba(163, 161, 161, 0.993);
 }
+.title_popins{
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+}
 /*--- space middle ---*/
 .space_middle{
   padding-top: 50px;
@@ -69,6 +70,12 @@ padding-bottom: 50px;
 
 }
 /*------------Events----------------*/
+.zooming{
+  transition: transform .3s;
+}
+.zooming:hover{
+  transform: scale(1.1);
+}
 .clickable{
     cursor: pointer;
 }

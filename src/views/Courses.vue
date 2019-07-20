@@ -1,6 +1,6 @@
 <template>
     <div>
-           <v-parallax class="top-banner" height="390">
+           <v-parallax class="service" height="390">
          
           <v-layout
             column
@@ -38,6 +38,7 @@
        
          </v-card>
         </v-layout>
+        <v-courses/>
     </div>
 </template>
 
@@ -62,8 +63,5 @@ export default {
 </script>
 
 <style scoped>
-.top-banner{
-background-image: url('../assets/img/events_back.jpg');
-background-size: cover;
-}
+
 </style>
