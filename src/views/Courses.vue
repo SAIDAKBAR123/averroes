@@ -20,24 +20,7 @@
           
           </v-layout>
         </v-parallax>
-          <v-layout row wrap justify-center>
-              <v-card flat  tile>
-          <v-flex xs12 sm12 md12>
-               <v-layout
-               dark
-            column
-          >
-            <h1 class="title_beauty p-2 text-xs-center" style="color:#c7b3a2">We are always ahead</h1>
-            <h2 class="title_beauty  text-xs-center">Professional solutions for your business.</h2>
-            <div class="mr-4 title_dance  text-xs-center col"><p>We provide premium customer support and offer affiliate programs.</p>
-             <hr class="deep-black accent-2 mt-0 d-inline-block mx-auto" style="width: 40%;">
-            </div>
-         
-          </v-layout>
-          </v-flex>
        
-         </v-card>
-        </v-layout>
         <v-courses/>
     </div>
 </template>
@@ -58,7 +41,8 @@ export default {
         }
       
       ]
-    })
+    }),
+ 
 }
 </script>
 

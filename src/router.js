@@ -50,8 +50,14 @@ export default new Router({
     },
     {
       path: '/courses/:id',
-      name: 'courses',  
+      name: 'courses/id',  
+      props: true,
       component: () => import('./components/Reusable/Definition.vue')
+    },
+    {
+      path: '/dashboard',
+      name: 'dashboard',  
+      component: () => import('./components/AdminPanel/DashboardPage.vue')
     }
   ]
 })

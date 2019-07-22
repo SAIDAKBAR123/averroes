@@ -31,7 +31,7 @@
    
   </v-carousel>
 
-  <v-card flat tile class=" space_middle">
+  <v-card width="100%" flat tile class=" space_middle">
   <v-layout  row wrap>
     <v-flex md12 sm12 xs12 offset-(xs)(1)>
        <v-card flat  tile>

@@ -1,5 +1,5 @@
 <template >
-    <div  style="background-color:#1c1b1f;">
+    <div  width="100%" style="background-color:#1c1b1f;">
 
   <!-- Footer Links -->
   <div class="container text-center text-md-left mt-5 pt-5">
@@ -19,7 +19,7 @@
         <p>
           <v-icon dark>email</v-icon><span/> info@example.com</p>
         <p>
-          <v-icon dark>phone</v-icon><span/> + 01 234 567 88</p>
+          <v-icon dark color="grey deep-darken 2">phone</v-icon><span/> + 01 234 567 88</p>
      
 
       </div>

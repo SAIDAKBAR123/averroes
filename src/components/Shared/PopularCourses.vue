@@ -10,7 +10,7 @@ laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
                   </v-flex>
         </v-layout>
       <v-layout row wrap>
-           <v-flex align-end  md3 sm6 xs12 v-for="item in courses" :key="item.icon">
+           <v-flex align-end  md3 sm6 xs12 v-for="item in courses" :key="item.title">
       <v-hover>
     <v-card
      
@@ -21,7 +21,7 @@ laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
     >
       <v-img
         :aspect-ratio="16/9"
-        :src="item.link"
+        :src="item.imageUrl"
       >
      
         <v-expand-transition>
@@ -49,7 +49,7 @@ laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
         >
         <v-avatar>
              <v-img
-             :src="item.avatar_inst"
+             :src="item.imageUrl"
              >
              </v-img>
         </v-avatar>
@@ -61,7 +61,7 @@ laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
       </v-card-text>
       <v-divider></v-divider>
       <v-card-actions justify-center >
-          <v-btn class="text-xs-center" round outline color="deep-blue lighten-4" >Continue</v-btn>
+          <v-btn class="text-xs-center"  :to="'/courses/'+item.id" round outline color="deep-blue lighten-4" >Continue</v-btn>
       </v-card-actions>
     </v-card>
   </v-hover>
@@ -76,43 +76,15 @@ laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
 
 <script>
 export default {
- data () {
-      return {
-         courses:[
-          {
-          link:'http://www.nicdarkthemes.com/themes/education/wp/demo/design-school/wp-content/uploads/sites/4/2016/06/course7.jpg',
-          title:'Photo Editing',
-          text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.',
-          instructor:'Marketing & Advertising',
-          avatar_inst:'http://www.nicdarkthemes.com/themes/education/wp/demo/design-school/wp-content/uploads/sites/4/2016/08/avatar-chef-3.jpg'
-          },
-           {
-          link:'http://www.nicdarkthemes.com/themes/education/wp/demo/design-school/wp-content/uploads/sites/4/2016/06/course2.jpg',
-          title:'Brand Identity',
-          instructor:'Marketing & Advertising',
-          text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.',
-          avatar_inst:'http://www.nicdarkthemes.com/themes/education/wp/demo/design-school/wp-content/uploads/sites/4/2016/08/avatar-chef-5.jpg'
-          },
-           {
-          link:'http://www.nicdarkthemes.com/themes/education/wp/demo/design-school/wp-content/uploads/sites/4/2016/06/course1-740x416.jpg',
-          title:'Web Design',
-          instructor:'Marketing & Advertising',
-          text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.',
-           avatar_inst:'http://www.nicdarkthemes.com/themes/education/wp/demo/design-school/wp-content/uploads/sites/4/2016/08/avatar-chef-6.jpg'
-          },
-           {
-          link:'http://www.nicdarkthemes.com/themes/education/wp/demo/design-school/wp-content/uploads/sites/4/2016/06/course5.jpg',
-          title:'Graphic Design',
-          instructor:'Marketing & Advertising',
-          text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.',
-           avatar_inst:'http://www.nicdarkthemes.com/themes/education/wp/demo/design-school/wp-content/uploads/sites/4/2016/08/avatar-chef-4.jpg'
-          }
-             
-        ],
-      
-      }
+
+    computed:{
+    courses(){
+        return this.$store.getters.loadedMeetups 
     }
+    }
+
 }
+
 </script>
 
 <style>
