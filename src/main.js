@@ -15,14 +15,14 @@ import VueInstagram from 'vue-instagram'
 import PopularCourses from './components/Shared/PopularCourses.vue'
 import Gallery from './components/Shared/Gallery.vue'
 import SubFooter from './components/Footer/SubFooter.vue'
-import VueQuillEditor from 'vue-quill-editor'
+//import VueQuillEditor from 'vue-quill-editor'
 import * as firebase from 'firebase';
 import AOS from 'aos';
 
 // require styles
-import 'quill/dist/quill.core.css'
+/*import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
+import 'quill/dist/quill.bubble.css'*/
 import 'aos/dist/aos.css';
 
 const settings = { 
@@ -34,7 +34,7 @@ Vue.use(YmapPlugin, settings)
 Vue.use(VeeValidate);
 Vue.use(Carousel3d);
 Vue.use(VueInstagram)
-Vue.use(VueQuillEditor)
+//Vue.use(VueQuillEditor)
 
 Vue.config.productionTip = false
 Vue.component('y-map',yandexMap)

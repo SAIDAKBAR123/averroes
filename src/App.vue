@@ -39,7 +39,30 @@
         <v-btn dark round flat class="title_font">{{item.title}}</v-btn>
             </v-toolbar-items>
           </v-list-tile>
+          <v-list-tile to="/courses">
+         <v-menu open-on-hover bottom offset-y>
+      <template v-slot:activator="{ on }">
+        <v-btn
+          dark round flat class="title_font"
+          v-on="on"
+        >
+          Courses
+        </v-btn>
+      </template>
+
+      <v-list>
+        <v-list-tile
+          v-for="(item, index) in courses"
+          :key="index"
+          :to="'/courses/'+item.id"
+        >
+          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+        </v-list-tile>
+      </v-list>
+    </v-menu>
+    </v-list-tile>
           <v-spacer></v-spacer>
+
            <v-list-tile v-for="item in social" :key="item.type" 
              class="hidden-sm-and-down"
              v-on:click="redirecting(item.link)"
@@ -64,7 +87,7 @@
 import AppHeader from './components/AppHeader.vue'
 import MainFooter from './components/Footer/MainFooter.vue'
 export default {
-  
+
   components:{
     AppHeader,
     MainFooter,
@@ -123,6 +146,9 @@ export default {
   }
   },
   computed:{
+      courses(){
+        return this.$store.getters.loadedMeetups 
+    },
          menuList (){
         return[
            
@@ -135,11 +161,6 @@ export default {
                 icon:'',
                 title:'services',
                 route: '/services'
-            },
-            {
-                icon:'',
-                title:'courses',
-                route: '/courses'
             },
             {
                  icon:'',
