@@ -36,7 +36,7 @@
         </v-layout>
         <v-layout row wrap align-center justify-center>
            <v-flex xs12 sm6 md4 shrink >
-            <div>
+            <div data-aos="fade-up" >
               <v-card flat >
               
                 <v-card-text>
@@ -47,7 +47,7 @@
              </v-flex>
          
           <v-flex xs12 grow sm6 md2 v-for="i in descriptions" :key="i.subtitle">
-            <div class="text-xs-center">
+            <div data-aos="flip-right" class="text-xs-center ">
               <v-card :color="i.color" class="elevation-10">
                 <div class="pt-4"> 
                 <i style="font-size:4rem; color:#fff" :class="i.icon"></i>
@@ -59,10 +59,10 @@
             </div>
              </v-flex>
         </v-layout>
-        <v-layout class="my-5" row wrap>
+        <v-layout class="my-5"  row wrap>
             <v-flex  xs12 md3 v-for="i in about" :key="i.iconic">
-              <v-card dark tile :color="i.color">
-                <div class="elevation-10" style="about_page">
+              <v-card data-aos="fade-up" data-aos-duration="4000" dark tile :color="i.color">
+                <div  class="elevation-10" style="about_page">
                   <p class="text-xs-center title_dance_big">{{i.heading}}</p>
                 </div>
                 <v-card-text>

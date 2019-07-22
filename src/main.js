@@ -17,11 +17,13 @@ import Gallery from './components/Shared/Gallery.vue'
 import SubFooter from './components/Footer/SubFooter.vue'
 import VueQuillEditor from 'vue-quill-editor'
 import * as firebase from 'firebase';
+import AOS from 'aos';
 
 // require styles
 import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
+import 'aos/dist/aos.css';
 
 const settings = { 
   apiKey: '3A6238712318f251319073449f52d33e3e79f7a39527142bb18ccf99112f166f17',
@@ -42,6 +44,7 @@ Vue.component('v-gallery',Gallery)
 Vue.component('v-sub-footer',SubFooter)
 new Vue({
   created () {
+    AOS.init()
     firebase.initializeApp({
       apiKey: "AIzaSyBe33RsbSkFIvAqp39SxInF2K8dmId8jHg",
       authDomain: "averroesuz.firebaseapp.com",

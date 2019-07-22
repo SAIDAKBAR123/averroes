@@ -26,6 +26,7 @@ Meet the financial and marketing specialists.</p>
       
        <v-hover>
     <v-card
+    data-aos="flip-left"
       flat
       slot-scope="{ hover }"
       class="mx-auto"
