@@ -1,6 +1,6 @@
 <template>
 <div class="my-2">
- <!-- <v-container>
+ <v-container>
     <v-layout row wrap>
       <v-flex md6>
         <v-card>
@@ -27,7 +27,7 @@
  </v-flex>
      
     </v-layout>
-  </v-container>-->
+  </v-container>
   <v-layout>
     <v-flex xs12 md12 justify-center align-center>
     <h1 class="instagram text-xs-center mb-5">Instagram</h1>

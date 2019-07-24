@@ -15,6 +15,7 @@ import VueInstagram from 'vue-instagram'
 import PopularCourses from './components/Shared/PopularCourses.vue'
 import Gallery from './components/Shared/Gallery.vue'
 import SubFooter from './components/Footer/SubFooter.vue'
+
 //import VueQuillEditor from 'vue-quill-editor'
 import * as firebase from 'firebase';
 import AOS from 'aos';

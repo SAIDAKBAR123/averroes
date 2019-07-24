@@ -39,6 +39,7 @@
        
          </v-card>
         </v-layout>
+         <v-sub-footer/>
     </div>
 </template>
 

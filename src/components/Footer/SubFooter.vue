@@ -33,7 +33,11 @@
             <v-flex xs12 md6>
                  <v-card flat color="rgb(30, 29, 32,0.98)" dark  tile height="190 ">
                     <v-card-text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt recusandae vero ad delectus molestias optio. Fugit debitis similique voluptatem aut voluptas sunt obcaecati, doloremque aperiam facilis sed quia molestias veritatis.
+                        <v-layout col wrap align-center justify-center>
+
+                    <span class="pr-1"> ПРИСОЕДИНЯЙТЕСЬ К НАШЕЙ ТЕЛЕГРАМНОЙ ГРУППЕ:</span> <v-btn href="https://t.me/averroes_consulting"  large color="blue" round flat outline><i class="fab fa-telegram-plane mr-2"></i>  Telegram</v-btn>
+                     <span class="pr-1 text-uppercase">Присоединяйтесь к нашему каналу INSTAGRAM:</span> <v-btn dark  color="pink lighten-1" href="http://instagram.com/averroes.consulting/"  large round flat outline><i class="fab fa-instagram mr-2"></i> Instagram</v-btn>
+                  </v-layout>
                     </v-card-text>
                 </v-card>
             </v-flex>

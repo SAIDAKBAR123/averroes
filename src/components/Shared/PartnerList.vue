@@ -2,11 +2,13 @@
     <div class="">
         <v-layout justify-center align-center row wrap>
                  <v-flex dark justify-center md12 xs12 offset-(md)(3) >
-                      <h1 class="title_beauty text-xs-center">Our Clients</h1>
+                      <h1 class="title_beauty text-xs-center">Наши партнеры</h1>
                        <div class="new_times text-xs-center px-5 mx-5"><p>
-                           Perspiciatis unde omnis iste natus sit voluptatem accusantium dolorem <br>
-laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
-                           </p></div>
+                           Мы работаем с каждым партнером, чтобы обеспечить нашим студентам дополнительную ценность
+                           </p>
+                            <hr class="grey darken-3 accent-2 mt-0 d-inline-block mx-auto" style="width: 10%;">
+                            </div>
+                           
                   </v-flex>
                   <v-flex  xs10 offset-(xs)(1) md2 offset-(md)(2)  v-for="item in partners" :key="item.name">
                    <v-container>

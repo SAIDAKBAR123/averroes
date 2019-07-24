@@ -1,18 +1,28 @@
 
 /*------------Font style----------------*/
-@import url('https://fonts.googleapis.com/css?family=Cinzel|Comfortaa|Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Courgette|Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Comfortaa|Dancing+Script&display=swap&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Courgette|Tangerine&display=swap&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p|Quicksand:400,500&display=swap&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500&display=swap&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=El+Messiri:400,500&display=swap&subset=cyrillic');
 .title_font{
  font-family: 'Comfortaa', cursive;
+
+}
+.title_crilic{
+  font-family: 'El Messiri', sans-serif;
+
+}
+.title_crilic_big{
+  font-family: 'El Messiri', sans-serif;
+  font-size: 1.5rem; 
 
 }
 
 .title_beauty{
   font-family: 'Cinzel', serif;
-  color:#c7b3a2
+  color:#141d27
 }
 .title_dance{
 font-family: 'Tangerine', cursive;

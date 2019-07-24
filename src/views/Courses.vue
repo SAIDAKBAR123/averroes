@@ -9,7 +9,7 @@
             class="overlays white--text"
           >
     
-            <h1 class="white--text mb-2 title_font text-xs-center">Course</h1>
+            <h1 class="white--text mb-2 title_font text-xs-center">Курсы</h1>
             <div class="headline mb-3 text-xs-center">
                 <v-breadcrumbs dark :items="items">
       <template v-slot:divider>
@@ -22,6 +22,8 @@
         </v-parallax>
        
         <v-courses/>
+        <v-sub-footer/>
+
     </div>
 </template>
 
@@ -30,12 +32,12 @@ export default {
   data: () => ({
       items: [
         {
-          text: 'Home',
+          text: 'Главная',
           disabled: true,
           href: '/'
         },
         {
-          text: 'Courses',
+          text: 'Курсы',
           disabled: true,
           href: 'courses'
         }

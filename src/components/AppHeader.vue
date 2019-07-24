@@ -28,7 +28,7 @@
             </v-list-tile-content>
           </v-list-tile>
 <v-divider/>
-   <v-list-tile >
+  <!-- <v-list-tile >
       
            <v-list-tile-content>
        <v-list-tile-title  >Russian</v-list-tile-title>
@@ -39,7 +39,7 @@
             <v-list-tile-content>
                <v-list-tile-title >English</v-list-tile-title>
             </v-list-tile-content>
-        </v-list-tile>
+        </v-list-tile>-->
      
         </v-list>
       </v-navigation-drawer>
@@ -59,7 +59,7 @@
           :to="item.route"
            >
             <v-list-tile-content>
-              <v-list-tile-title class="text-uppercase">{{item.title}} /</v-list-tile-title>
+              <v-list-tile-title class="title_font text-uppercase">{{item.title}} </v-list-tile-title>
             </v-list-tile-content>
           
           </v-list-tile>
@@ -118,28 +118,28 @@ methods: {
            
             {
                 icon: '',
-                title:'about',
+                title:'о нас',
                 route: '/about'
             },
              {
                 icon:'',
-                title:'services',
+                title:'Услуги',
                 route: '/services'
             },
             {
                 icon:'',
-                title:'courses',
+                title:'курсы',
                 route: '/courses'
             },
             {
                  icon:'',
-                title:'events',
+                title:'События',
                 route: '/events'
             },
               {
                  icon:'',
 
-                title:'contacts',
+                title:'контакты',
                 route: '/contacts'
             }
         ]

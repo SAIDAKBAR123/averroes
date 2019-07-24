@@ -8,10 +8,10 @@
                dark
             column
           >
-            <h1 class="title_beauty p-2 text-xs-center" style="color:#c7b3a2">Our Staff</h1>
+            <h1 class="title_beauty p-2 text-xs-center" >Наш персонал</h1>
 
-            <div class="mr-4 new_times  text-xs-center col"><p>We work to make your business start effectively working for you.<br>
-Meet the financial and marketing specialists.</p>
+            <div class="mr-4 new_times  text-xs-center col"><p>Мы работаем, чтобы ваше обучение началось эффективно, помогая вам.<br>
+Познакомьтесь с финансовыми и маркетинговыми инструкторами.</p>
              <hr class="grey darken-3 accent-2 mt-0 d-inline-block mx-auto" style="width: 10%;">
             </div>
          

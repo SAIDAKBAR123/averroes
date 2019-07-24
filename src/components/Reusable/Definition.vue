@@ -37,7 +37,7 @@
               <v-flex xs12 sm6 md12>
                    <v-card color="blue" tile flat>
                    
-               <v-carousel height="300"   hide-controls>
+               <v-carousel hide-delimiters  height="300"   hide-controls>
                     <v-carousel-item
                   
                     :src="course.imageUrl"
@@ -48,45 +48,9 @@
                     </v-carousel>
             </v-card>
               </v-flex>
-              <v-flex xs12 sm6 md12>
+              <v-flex xs12 sm6 md12 mt2>
                   <v-card flat tile color="transparent">
-                       <v-toolbar
-                       flat
-      color="transparent"
-      
-      tabs
-      dense
-      
-    >
-      <template >
-        <v-tabs
-          v-model="tab"
-        
-          dark
-          grow
-        >
-          <v-tabs-slider color="blue"></v-tabs-slider>
-
-          <v-tab
-            v-for="item in items"
-            :key="item"
-          >
-            {{ item }}
-          </v-tab>
-        </v-tabs>
-      </template>
-    </v-toolbar>
-
-    <v-tabs-items v-model="tab">
-      <v-tab-item
-        v-for="item in items"
-        :key="item"
-      >
-        <v-card flat>
-          <v-card-text v-html="course.description"></v-card-text>
-        </v-card>
-      </v-tab-item>
-    </v-tabs-items>
+<v-card-text class="title_crilic" v-html="course.description"></v-card-text>
                   </v-card>
 
               </v-flex>
@@ -97,7 +61,7 @@
          <v-flex xs12 sm12 md4>
               <v-layout column wrap>
               <v-flex xs12 sm12 md12 offset-md2>
-                    <h2 class="mt-4 pl-3">Category</h2>
+                    <h2 class="mt-4 pl-3">Kатегория</h2>
               </v-flex>
               <v-flex xs12 sm6 md12 offset-md2>
                    <v-card color="yellow" tile flat>
@@ -219,10 +183,6 @@ export default {
     data () {
       return {
         
-        tab: null,
-        items: [
-          'Overview', 'Curriculum', 'Instructor'
-        ],
           navgation: [
         {
           text: 'Home',

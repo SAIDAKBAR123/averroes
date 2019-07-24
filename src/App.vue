@@ -39,14 +39,14 @@
         <v-btn dark round flat class="title_font">{{item.title}}</v-btn>
             </v-toolbar-items>
           </v-list-tile>
-          <v-list-tile to="/courses">
+          <v-list-tile     class=" hidden-sm-and-down"  to="/courses">
          <v-menu open-on-hover bottom offset-y>
       <template v-slot:activator="{ on }">
         <v-btn
           dark round flat class="title_font"
           v-on="on"
         >
-          Courses
+        Курсы
         </v-btn>
       </template>
 
@@ -123,15 +123,15 @@ export default {
     ],
       address:[
           {
-            title:' 254 Street Avenue, Los Angeles, LA 2415 US.',
+            title:'гд. Ташкент, Чиланзар 7 кв, улица Мукимия, 160',
             icon :'room'
           },
           {
-            title:' Mon - Fri : 09:00 - 17:00',
+            title:'Пн - пт : 09:00 - 21:00',
             icon :'watch'
           },
           {
-            title:' 8 800 256 35 87',
+            title:'+ 99897  770 99 25',
             icon :'call'
           }
         ]
@@ -152,25 +152,30 @@ export default {
          menuList (){
         return[
            
-            {
+             {
                 icon: '',
-                title:'about',
+                title:'о нас',
                 route: '/about'
             },
              {
                 icon:'',
-                title:'services',
+                title:'Услуги',
                 route: '/services'
             },
             {
+                icon:'',
+                title:'курсы',
+                route: '/courses'
+            },
+            {
                  icon:'',
-                title:'events',
+                title:'События',
                 route: '/events'
             },
               {
                  icon:'',
 
-                title:'contacts',
+                title:'контакты',
                 route: '/contacts'
             }
         ]

@@ -9,7 +9,7 @@
             class="white--text"
           >
     
-            <h1 class="white--text mb-2 title_font text-xs-center">Contacts</h1>
+            <h1 class="white--text mb-2 title_font text-xs-center">Контакты</h1>
             <div class="headline mb-3 text-xs-center">
                   <v-breadcrumbs dark :items="items">
       <template v-slot:divider>
@@ -25,9 +25,9 @@
                dark
             column
           >
-            <h1 class="title_beauty pt-2 mt-5 text-xs-center" >Our Location</h1>
+            <h1 class="title_beauty pt-2 mt-5 text-xs-center" >Наше местоположение</h1>
           
-            <div class="mr-4 new_times text-xs-center col"><p>We provide premium customer support and offer affiliate programs.</p>
+            <div class="mr-4 new_times text-xs-center col"><p>Мы предоставляем премиум поддержку клиентов и предлагаем партнерские программы.</p>
              <hr class="grey darken-3 accent-2 mt-0 d-inline-block mx-auto" style="width: 10%;">
             </div>
          
@@ -36,22 +36,20 @@
 <v-layout class="space_middle" justify-center row wrap>
   <v-flex md4 xs12 justify-start>
     <v-card flat>
-      <v-card-title>
-        <h1 class="title_playball">Our Location </h1>
-      </v-card-title>
+  
       <v-card-text>
       
-            <ul class="list-unstyled mb-0">
-                <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                    <h5 class="title_mplus">San Francisco, CA 94126, USA</h5>
+            <ul class="list-unstyled ml-2 mr-2 mb-0">
+                <li>
+                    <h5 class="title_mplus"><i style="color: grey; font-size:1.6rem;"  class="fas fa-map-marker-alt fa-2x pl-2"></i>  Узбекистан, город Ташкент, Чиланзар 7 квартал, улица Мукимия, 160 - Чиланзарский район Главная дорога Мукимия</h5>
                 </li>
 
-                <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                    <h5 class="title_mplus">+ 998 (99) 944 33 44</h5>
+                <li>
+                    <h5 class="title_mplus"><i  style="color: grey; font-size:1.6rem;"  class="fas fa-phone mt-4 fa-2x pl-2"></i> + 998 (99) 944 33 44</h5>
                 </li>
 
-                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                    <h5 class="title_mplus">averroes@support.com</h5>
+                <li>
+                    <h5 class="title_mplus"><i  style="color: grey; font-size:1.6rem;" class="fas fa-envelope mt-4 fa-2x pl-2"></i> averroesconsulting@gmail.com</h5>
                 </li>
             </ul>
       
@@ -106,12 +104,12 @@ data(){
     ],
       items: [
         {
-          text: 'Home',
+          text: 'Главная',
           disabled: true,
           href: '/'
         },
         {
-          text: 'Contacts',
+          text: 'Контакты',
           disabled: true,
           href: 'contacts'
         },

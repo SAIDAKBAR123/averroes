@@ -15,11 +15,11 @@
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
        
         <p>
-         <v-icon dark>home</v-icon><span/> York, NY 10012, US</p>
+      <v-icon dark>home</v-icon><span class="ml-1">Узбекистан, город Ташкент, Чиланзар 7 квартал, улица Мукимия, 160 - Чиланзарский район Главная дорога Мукимия</span></p>
         <p>
-          <v-icon dark>email</v-icon><span/> info@example.com</p>
+          <v-icon dark>email</v-icon><span class="ml-1">averroesconsulting@gmail.com</span></p>
         <p>
-          <v-icon dark color="grey deep-darken 2">phone</v-icon><span/> + 01 234 567 88</p>
+          <v-icon dark color="grey deep-darken 2">phone</v-icon><span class="ml-1"> + 998(97) 770-99-25</span></p>
      
 
       </div>
@@ -29,10 +29,10 @@
       <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
 
         <!-- Links -->
-        <h5 class=" white--text text-uppercase font-weight-bold">Services</h5>
+        <h5 class=" white--text text-uppercase font-weight-bold">Услуги</h5>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>
-          <a href="#!">Your Account</a>
+          <a href="#!"></a>
         </p>
         <p>
           <a href="#!">Become an Affiliate</a>
