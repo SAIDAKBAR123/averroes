@@ -9,7 +9,7 @@
             class="white--text"
           >
     
-            <h1 class="white--text mb-2 title_font text-xs-center">Events</h1>
+            <h1 class="white--text mb-2 title_font text-xs-center">События</h1>
             <div class="white--text headline mb-3 text-xs-center">
                  <v-breadcrumbs dark :items="items">
       <template v-slot:divider>
@@ -49,12 +49,12 @@ data(){
   return {
       items: [
         {
-          text: 'Home',
+          text: 'Главная',
           disabled:true,
           href: '/'
         },
         {
-          text: 'Events',
+          text: 'События',
           disabled: true,
           href: 'events'
         }

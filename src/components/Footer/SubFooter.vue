@@ -30,8 +30,8 @@
 </y-map>
                 </v-card>
             </v-flex>
-            <v-flex xs12 md6>
-                 <v-card flat color="rgb(30, 29, 32,0.98)" dark  tile height="190 ">
+            <v-flex xs12 md6 align-center>
+                 <v-card flat color="rgb(30, 29, 32,0.98)" dark  tile height="100%">
                     <v-card-text>
                         <v-layout col wrap align-center justify-center>
 
