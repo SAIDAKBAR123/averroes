@@ -126,11 +126,7 @@ methods: {
                 title:'Услуги',
                 route: '/services'
             },
-            {
-                icon:'',
-                title:'курсы',
-                route: '/courses'
-            },
+            
             {
                  icon:'',
                 title:'События',

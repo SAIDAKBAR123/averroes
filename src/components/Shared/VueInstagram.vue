@@ -37,13 +37,13 @@
 </div>
       <div class="col">
          <vue-custom-scrollbar class="scroll-area"  >
- <vue-instagram token="6138362237.2d8d391.e4da54ff5695492b88532553d41318f9" username="i.saidakbar" :count="5">
+ <vue-instagram token="12863084980.7106a38.27859055bceb45e9bb3cd183a3e2b238" username="i.saidakbar" :count="5">
    
     <template slot="feeds" scope="props">
    
    <v-card
    
-    max-width="350"
+    max-width="320"
     class="mx-auto my-auto elevation-10"
   >
     <v-list-item >
@@ -55,38 +55,33 @@
         alt="John"
       >
     </v-avatar>
-
-    
-       
-        <v-list-item-title class="font-weight-bold font-weight-medium body"><span class="ml-1">{{props.feed.user.username }}</span> <v-btn class="pl-3 ml-5" :href="props.feed.link" round dark outline color="blue">view profile</v-btn></v-list-item-title>
-       
-      
+  
+        <v-list-item-title class="font-weight-bold font-weight-medium body"><span class="ml-1 pr-4">{{props.feed.user.username }} </span> <v-btn class="ml-5 pl-5" left :href="props.feed.link" small fab dark flat> <i style="font-size:2rem; color:black" class="fab fa-instagram"></i></v-btn></v-list-item-title>
      
     </v-list-item>
 
     <v-img
       :src="props.feed.images.standard_resolution.url"
-      height="230"
+      height="320"
     ></v-img>
 
     <v-card-actions>
   <v-btn icon :href="props.feed.link">
-    <v-icon color="grey darken-1">favorite_border</v-icon>
-  </v-btn>
+<i class="far fa-heart sizing"></i>  </v-btn>
    <v-btn icon :href="props.feed.link">
-    <v-icon  color="grey darken-1">chat_bubble_outline</v-icon>
+   <i class="far fa-comment sizing"></i> 
   </v-btn>
     <v-spacer></v-spacer>
-     <v-btn icon :href="props.feed.link">
-    <v-icon  color="grey darken-1">turned_in_not</v-icon>
+     <v-btn flat icon :href="props.feed.link">
+    <i class="far fa-bookmark sizing"></i> 
   </v-btn>
     </v-card-actions>
-   <div class="mx-auto">
+   <div class="m-0 p-0">
      <p class="ml-3 font-weight-black"> {{props.feed.likes.count}} likes</p>
 </div>
-    <v-card-text>
-     {{props.feed.caption.text}}
-    </v-card-text>
+    <div class="m-2 p-2" v-text="props.feed.caption.text.substring(0,200)+'...'">
+     
+    </div>
 
   </v-card>
 <br>
@@ -109,7 +104,7 @@
    
     </v-flex>
   </v-layout>
-  <!-- <div class="elfsight-app-081b7506-5c93-422d-98f7-f982c0025854"></div>-->
+  <div class="elfsight-app-081b7506-5c93-422d-98f7-f982c0025854"></div>
   </div>
 </template>
 
@@ -168,5 +163,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   background: #d6249f;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
   box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+.sizing{
+  font-size: 2rem;
+  color: rgba(37, 37, 37, 0.767);
+  
 }
 </style>
