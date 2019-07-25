@@ -3,9 +3,9 @@
         <v-layout>
              <v-flex dark justify-center md12 xs12 offset-(md)(3) >
                       <h1 class="title_beauty text-xs-center">Популярные курсы</h1>
-                       <div class="new_times text-xs-center px-5 mx-5"><p>
-                           Perspiciatis unde omnis iste natus sit voluptatem accusantium dolorem <br>
-laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+                       <div class="new_times text-xs-center  mx-5 p-5"><p>
+                         Просмотрите самые популярные курсы от Averroes Consulting, чтобы продвинуться по карьерной лестнице в качестве финансового аналитика мирового уровня. 
+От финансового моделирования и оценки бизнеса до презентаций и навыков Excel - это самые популярные курсы Averroes Consulting по проведению финансового анализа.
                            </p></div>
                   </v-flex>
         </v-layout>
@@ -13,9 +13,9 @@ laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
            <v-flex align-end  md3 sm6 xs12 v-for="item in courses" :key="item.title">
       <v-hover>
     <v-card
-     
+    
       slot-scope="{ hover }"
-      class="mx-auto mb-1"
+      class="mx-auto mb-1 elevation-10"
       color="transparent"
       max-width="290"
       

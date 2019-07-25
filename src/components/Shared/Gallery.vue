@@ -1,17 +1,17 @@
 <template>
-    <div class="mb-5 pb-5">
+    <div v-show="false" >
       <v-layout row wrap justify-center align-center>
           <v-flex  shrink  align-center >
-            <v-card flat width="300">
+            <v-card flat tile color="transparent">
                 <v-flex xs12 sm12 md12>
                <v-layout
                dark
             column
           >
-            <h1 class="title_beauty text-xs-center" style="color:#c7b3a2">Our Gallery</h1>
+            <h1 class="title_beauty text-xs-center" style="color:#c7b3a2">Наша галерея</h1>
 
-            <div class="mr-4 new_times ml-4 pr-1 col"><p>View some of the most successful projects and more by our specialists presented in this gallery.</p>
-             <hr class="grey darken-3 accent-2 mt-0 d-inline-block mx-auto" style="width: 10%;">
+            <div class=" new_times p-4 col text-xs-center"><p class=" p-4">Посмотреть некоторые из самых успешных студентов и многое другое от наших специалистов, представленных в этой галерее.</p>
+             <hr class=" grey darken-3 accent-2 mt-0 d-inline-block mx-auto" style="width: 7%;">
             </div>
          
           </v-layout>

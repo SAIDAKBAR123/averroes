@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="space_middle">
         <v-layout justify-center align-center row wrap>
                  <v-flex dark justify-center md12 xs12 offset-(md)(3) >
                       <h1 class="title_beauty text-xs-center">Наши партнеры</h1>
