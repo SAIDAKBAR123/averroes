@@ -2,7 +2,7 @@
     <div class="space_middle">
         <v-layout>
              <v-flex dark justify-center md12 xs12 offset-(md)(3) >
-                      <h1 class="title_beauty text-xs-center">Popular Courses</h1>
+                      <h1 class="title_beauty text-xs-center">Популярные курсы</h1>
                        <div class="new_times text-xs-center px-5 mx-5"><p>
                            Perspiciatis unde omnis iste natus sit voluptatem accusantium dolorem <br>
 laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
@@ -15,9 +15,10 @@ laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
     <v-card
      
       slot-scope="{ hover }"
-      class="mx-auto my-auto"
+      class="mx-auto mb-1"
       color="transparent"
       max-width="290"
+      
     >
       <v-img
         :aspect-ratio="16/9"
@@ -30,7 +31,7 @@ laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
             class="d-flex transition-fast-in-fast-out grey darken-2 v-card--reveal display-3 white--text"
             style="height: 100%;"
           >
-            facebook
+           Averroes
           </div>
         </v-expand-transition>
       </v-img>
@@ -54,14 +55,14 @@ laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
              </v-img>
         </v-avatar>
         </v-btn>
-        <div class="text-xs-start title_playball black--text  mb-2">{{item.title}}</div>
-        <h3 class="text-xs-start subheading
- font-weight-light grey--text mb-2">{{item.text }}</h3><v-spacer/>
+        <div  class="text-xs-start title_playball black--text  mb-2">{{item.title}}</div>
+        <h6 class="text-xs-start title_crilic
+ font-weight-light grey--text mb-2" v-html="`${item.description.substring(0,70)}`+'...'"></h6><v-spacer/>
        <h3 class="pb-0 mb-0 title_dance">{{item.instructor}}</h3>
       </v-card-text>
       <v-divider></v-divider>
       <v-card-actions justify-center >
-          <v-btn class="text-xs-center"  :to="'/courses/'+item.id" round outline color="deep-blue lighten-4" >Continue</v-btn>
+          <v-btn class="text-xs-center"  :to="'/courses/'+item.id" round outline color="deep-blue lighten-4" >подробно</v-btn>
       </v-card-actions>
     </v-card>
   </v-hover>
@@ -69,7 +70,7 @@ laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
 
 </v-layout>
 <v-layout class="mt-5" justify-center align-center>
-  <v-btn outline large round color="blue">View more...</v-btn>
+  <v-btn outline to="/courses" large round color="blue">View more...</v-btn>
 </v-layout>
     </div>
 </template>
@@ -81,7 +82,8 @@ export default {
     courses(){
         return this.$store.getters.loadedMeetups 
     }
-    }
+    },
+  
 
 }
 

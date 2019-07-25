@@ -46,7 +46,7 @@
           dark round flat class="title_font"
           v-on="on"
         >
-        Курсы
+      Курсы
         </v-btn>
       </template>
 

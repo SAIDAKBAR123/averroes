@@ -107,6 +107,7 @@
 import TeamList from '../components/Shared/TeamList.vue'
 import PartnerList from '../components/Shared/PartnerList.vue'
 import VueInstagram from '../components/Shared/VueInstagram.vue'
+
   export default {
     computed:{
     totalHeight(){
@@ -119,7 +120,8 @@ import VueInstagram from '../components/Shared/VueInstagram.vue'
     components:{
 TeamList,
 PartnerList,
-VueInstagram
+VueInstagram,
+
     },
     
     data () {

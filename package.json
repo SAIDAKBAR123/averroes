@@ -19,6 +19,7 @@
     "vee-validate": "^2.2.12",
     "vue": "^2.6.10",
     "vue-carousel-3d": "^0.2.0",
+    "vue-custom-scrollbar": "^1.1.0",
     "vue-instagram": "^2.0.1",
     "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.0.3",

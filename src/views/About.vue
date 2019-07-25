@@ -1,6 +1,7 @@
 <template>
   <div class="about">
-      <v-parallax class="top-banner" height="390">
+   
+     <v-parallax :src="require('@/assets/img/events_back.jpg')"   height="390">
          
           <v-layout
             column
@@ -20,6 +21,7 @@
           
           </v-layout>
         </v-parallax>
+        
         <v-layout row wrap class="space_middle">
              <v-flex xs12 sm4 md5 >
             <div class=" ">

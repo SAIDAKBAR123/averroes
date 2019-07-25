@@ -1,6 +1,6 @@
 <template>
     <div>
-             <v-parallax class="contacts" height="390">
+             <v-parallax :src="require('@/assets/img/events_back.jpg')" height="390">
          
           <v-layout
             column
