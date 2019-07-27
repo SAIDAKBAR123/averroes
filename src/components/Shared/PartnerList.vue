@@ -3,10 +3,8 @@
         <v-layout justify-center align-center row wrap>
                  <v-flex dark justify-center md12 xs12 offset-(md)(3) >
                       <h1 class="title_beauty text-xs-center">Наши партнеры</h1>
-                       <div class="new_times text-xs-center px-5 mx-5"><p>
-                           Мы работаем с каждым партнером, чтобы обеспечить нашим студентам дополнительную ценность
-                           </p>
-                            <hr class="grey darken-3 accent-2 mt-0 d-inline-block mx-auto" style="width: 10%;">
+                       <div class="new_times text-xs-center px-5 mx-5">
+                            <hr class="grey darken-3 accent-2 mt-0 d-inline-block mx-auto" style="width: 7%;">
                             </div>
                            
                   </v-flex>

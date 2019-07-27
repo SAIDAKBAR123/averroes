@@ -12,7 +12,7 @@
 
         <!-- Content -->
         <h5 class="white--text text-uppercase font-weight-bold">Averroes Consulting</h5>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <hr class="white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
        
         <p>
       <v-icon dark>home</v-icon><span class="ml-1">Узбекистан, город Ташкент, Чиланзар 7 квартал, улица Мукимия, 160 - Чиланзарский район Главная дорога Мукимия</span></p>
@@ -29,33 +29,16 @@
       <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
 
         <!-- Links -->
-        <h5 class=" white--text text-uppercase font-weight-bold">Услуги</h5>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p>
-          <a href="#!"></a>
+        <h5 class=" white--text text-uppercase font-weight-bold">Курсы</h5>
+        <hr class="white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p class="white--text" v-for="(course,i) in courses" :key="course.id">
+         <a class="white--text" :href="'http://averroes.uz/#/courses/'+course.id" target="_blank" rel="noopener noreferrer">{{course.title}}</a>
+        
         </p>
-        <p>
-          <a href="#!">Become an Affiliate</a>
-        </p>
-        <p>
-          <a href="#!">Shipping Rates</a>
-        </p>
-        <p>
-          <a href="#!">Help</a>
-        </p>
+      
 
       </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 col-xl-4 mx-auto mb-md-0 mb-4">
-
-        <!-- Links -->
-        <h5 class="white--text text-uppercase font-weight-bold">Contact form</h5>
-        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
     
-      </div>
-      <!-- Grid column -->
 
     </div>
     <!-- Grid row -->
@@ -122,6 +105,11 @@ export default {
 
 
     computed: {
+      
+    courses(){
+        return this.$store.getters.loadedMeetups 
+    },
+  
       localAttrs () {
         const attrs = {}
 

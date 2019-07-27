@@ -123,7 +123,7 @@ export default {
     ],
       address:[
           {
-            title:'гд. Ташкент, Чиланзар 7 кв, улица Мукимия, 160',
+            title:'гд. Ташкент, Чиланзар 7 кв, улица Мукимий, 160',
             icon :'room'
           },
           {
@@ -162,11 +162,7 @@ export default {
                 title:'Услуги',
                 route: '/services'
             },
-            {
-                icon:'',
-                title:'курсы',
-                route: '/courses'
-            },
+         
             {
                  icon:'',
                 title:'События',

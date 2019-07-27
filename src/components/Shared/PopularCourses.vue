@@ -9,15 +9,17 @@
                            </p></div>
                   </v-flex>
         </v-layout>
-      <v-layout row wrap>
+      <v-layout row wrap offset-md1>
            <v-flex align-end  md3 sm6 xs12 v-for="item in courses" :key="item.title">
       <v-hover>
     <v-card
     
       slot-scope="{ hover }"
-      class="mx-auto mb-1 elevation-10"
+      class="mx-auto mb-2 elevation-10"
       color="transparent"
-      max-width="290"
+    max-width="290"
+    height="370"
+     
       
     >
       <v-img
@@ -36,8 +38,9 @@
         </v-expand-transition>
       </v-img>
       <v-card-text
-        class="pt-4"
-        style="position: relative;"
+        class=""
+     style="position: relative;
+     height:120px"
       >
          <v-btn
           absolute
@@ -46,7 +49,7 @@
           fab
           
           right
-          top
+         top
         >
         <v-avatar>
              <v-img
@@ -55,15 +58,15 @@
              </v-img>
         </v-avatar>
         </v-btn>
-        <div  class="text-xs-start title_playball black--text  mb-2">{{item.title}}</div>
+        <div  class="text-xs-start title_playball black--text  mb-2 pt-3">{{item.title}}</div>
         <h6 class="text-xs-start title_crilic
  font-weight-light grey--text mb-2" v-html="`${item.description.substring(0,70)}`+'...'"></h6><v-spacer/>
-       <h3 class="pb-0 mb-0 title_dance">{{item.instructor}}</h3>
+     
       </v-card-text>
       <v-divider></v-divider>
-      <v-card-actions justify-center >
-          <v-btn class="text-xs-center"  :to="'/courses/'+item.id" round outline color="deep-blue lighten-4" >подробно</v-btn>
-      </v-card-actions>
+      
+          <v-btn  class="text-xs-start p-2"  :to="'/courses/'+item.id" round large outline color="blue" >подробно</v-btn>
+      
     </v-card>
   </v-hover>
 </v-flex>

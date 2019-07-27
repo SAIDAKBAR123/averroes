@@ -34,6 +34,12 @@ export default new Router({
       component: () => import('./views/Events.vue')
     },
     {
+      path: '/event/:id',
+      name: 'event',  
+      props: true,
+      component: () => import('./components/Reusable/EventsList.vue')
+    },
+    {
       path: '/courses',
       name: 'courses',  
       component: () => import('./views/Courses.vue')

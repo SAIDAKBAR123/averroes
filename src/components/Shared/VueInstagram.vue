@@ -1,10 +1,10 @@
 <template>
 <div class="my-2">
  <v-container>
-    <v-layout row wrap align-center justify-center>
+    <v-layout row wrap align-baseline justify-center>
       <v-flex md6 xs12>
-        <h1 class="title_beauty text-xs-center mb-2">Наши последние посты</h1>
-        <v-card dark color="green">
+        <h1 class="title_beauty text-xs-center mb-4 p-1 ">Наши последние посты</h1>
+        <v-card class="mt-5" dark color="green">
            <v-list three-line>
             
           <template v-for="(item, index) in events">
@@ -12,28 +12,28 @@
              
               :key="item.title"
               avatar
-              :to="'/events/'+item.id"
+              :to="'/event/'+item.id"
             >
-              <v-list-tile-avatar>
+              <v-list-tile-avatar class="mt-1" size="60">
                 <img :src="item.imageUrl">
               </v-list-tile-avatar>
 
-              <v-list-tile-content>
+              <v-list-tile-content class="p-3">
                 <v-list-tile-title v-html="item.title"></v-list-tile-title>
-                <v-list-tile-sub-title v-html="item.date"></v-list-tile-sub-title>
+                <v-spacer></v-spacer>
+                <v-list-tile-sub-title v-html="item.description.substring(0,40)+'&#8230;&#8230;'"></v-list-tile-sub-title>
               </v-list-tile-content>
             </v-list-tile>
           </template>
         </v-list>
         </v-card>
       </v-flex>
-    <v-flex md6 xs12>
+    <v-flex class="hidden-sm-and-down" md6 xs12>
      
-      <div class="row m-3">
-        <span class="instagram_icon">
-  <span class="fa fa-instagram"></span>
-</span>
-<h1 class="instagram title_beauty mt-4 p-1 pl-2">instagram</h1>
+      <div class="text-xs-center col">
+       <h1 class="instagram ">Instagram</h1><v-spacer></v-spacer>
+<v-btn color="blue"  href="https://www.instagram.com/averroes.consulting/" dark>Follow</v-btn>
+
 </div>
       <div class="col">
          <vue-custom-scrollbar class="scroll-area"  >
@@ -75,11 +75,16 @@
      <v-btn flat icon :href="props.feed.link">
     <i class="far fa-bookmark sizing"></i> 
   </v-btn>
+ 
     </v-card-actions>
-   <div class="m-0 p-0">
-     <p class="ml-3 font-weight-black"> {{props.feed.likes.count}} likes</p>
+      <p class="ml-3 font-weight-black"> {{props.feed.likes.count}} likes</p>
+   <div class="m-1 p-0 row">
+    
+     <p class="p-1 m-0" v-for="(tag,i) in props.feed.tags" :key="i">
+     <a :href="props.feed.link" target="_blank" rel="noopener noreferrer">#{{tag}}</a> 
+     </p>
 </div>
-    <div class="m-2 p-2" v-text="props.feed.caption.text.substring(0,200)+'...'">
+    <div class="p-2" v-text="props.feed.caption.text.substring(0,200)+'...'">
      
     </div>
 
@@ -104,7 +109,7 @@
    
     </v-flex>
   </v-layout>
-  <div class="elfsight-app-081b7506-5c93-422d-98f7-f982c0025854"></div>
+ <!-- <div class="elfsight-app-081b7506-5c93-422d-98f7-f982c0025854"></div>-->
   </div>
 </template>
 
@@ -138,16 +143,11 @@ export default {
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 .scroll-area {
-  background: #f09433; 
-background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
   padding:1rem;
- background-color: antiquewhite;
+ background-color: rgba(155, 155, 155, 0.753);
   position: relative;
   margin: auto;
-  width: 600px;
+  width: 390px;
   height: 430px;
 }
 .instagram_icon {
