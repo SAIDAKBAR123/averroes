@@ -29,7 +29,7 @@
         </v-card>
       </v-flex>
     <v-flex class="hidden-sm-and-down" md8 xs12>
-     
+       <h1 class="title_beauty instagram text-xs-center p-1 mt-3 pb-2 mb-3">Следите за нами в инстаграм</h1>
      <!-- <div class="text-xs-center col">
        <h1 class="instagram ">Instagram</h1><v-spacer></v-spacer>
 <v-btn color="blue"  href="https://www.instagram.com/averroes.consulting/" dark>Follow</v-btn>

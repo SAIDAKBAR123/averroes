@@ -69,7 +69,7 @@
   <v-layout   align-content-center justify-center row wrap>
     <v-flex align-content-center md3 xs12 lg3 sm6>
        <v-card  height="400 " tile flat color="rgb(233, 231, 231)" dark >
-            <v-card-title dark primary class="pt-5 justify-center icons title"><i style="color:grey" class="fas fa-university"></i></v-card-title>
+            <v-card-title dark primary class="pt-5 justify-center icons title"><i style="color:grey" class="fas fa-bullseye"></i></v-card-title>
             <h4 class="black--text text-xs-center title_font">Нацеленность на результат</h4>
             <v-card-text dark class="black--text text-xs-center">В качестве поставщиков доступного образования для масс наша воля заключается в том, чтобы обеспечить тем, кто стремится к лучшему будущему, средствами и результатами, которые они заслуживают</v-card-text>
           </v-card>
@@ -141,7 +141,7 @@ VueInstagram,
         
           },
           {
-            icon:'fas fa-business-time',
+            icon:'fas fa-users',
             color:'#2b2c30',
              title:'Investment Management',
              icon_color:'white',
@@ -201,7 +201,7 @@ VueInstagram,
          {
            iconic:'edu3.png',
           color: 'cyan ',
-          icon: 'mdi-airballoon',
+          icon: 'fas fa-bullseye',
           heading:'Нацеленность на результат',
           description:'В качестве поставщиков доступного образования для масс наша воля заключается в том, чтобы обеспечить тем, кто стремится к лучшему будущему, средствами и результатами, которые они заслуживают'
         }]

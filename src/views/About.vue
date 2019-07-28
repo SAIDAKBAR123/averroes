@@ -50,22 +50,31 @@
              </v-flex>
         
         </v-layout>
-        
-        <v-layout class="my-5"  row wrap>
           <v-flex xs12 sm12 md12 >
               <h1 class="title_beauty text-xs-center mb-3 pb-2">Главные ценности</h1>
           </v-flex>
-            <v-flex  xs12 md3 v-for="i in about" :key="i.iconic">
-              <v-card height="25rem" data-aos="fade-up" data-aos-duration="4000" dark tile color="red darken-1">
+       <v-container>
+          <v-layout class="my-5"  row wrap>
+        
+            <v-flex  xs12 md6  v-for="i in about" :key="i.iconic">
+              <v-card  class="mx-auto" height="23rem" data-aos="zoom-out-down"   dark tile color="red darken-1">
                 <div  class="elevation-10" style="about_page">
+                 
                   <p class="text-xs-center title_crilic_big">{{i.heading}}</p>
+                  
                 </div>
                 <v-card-text>
-                <p class="title_font pl-1 pr-1 ml-1">{{i.description}}</p>
+                   
+                  <div class=" photo text-xs-center">
+        <i id="icon_main" :class="i.iconic+' '"></i>
+                <p class="title_fonts  m-2 p-3">{{i.description}}</p>
+                  </div>
                  </v-card-text>
               </v-card>
+
             </v-flex>
         </v-layout>
+       </v-container>
       <team-list/> 
         <partner-list/>
         <v-sub-footer/>
@@ -115,30 +124,33 @@ export default {
    
         about:[
         {
-           iconic:'edu4.png',
-          color: 'brown lighten-3',
+           iconic:'fas fa-funnel-dollar',
+          timer:3300,
           icon: 'mdi-buffer',
           heading:'Убеждение',
-          description:'Мы считаем что нельзя научить человека без указания путей рационального мышления, который состоит из риторической, диалектической и демонстративных методов последовательного и убедительного хода мыслей. Наша цель в том чтобы определить путь к саморазвитию через тяжелый труд и взращивание привычки к совершенству, которые сформируют личность.'
+          description:'Мы считаем что нельзя научить человека без указания путей рационального мышления, который состоит из риторической, диалектической и демонстративных методов последовательного и убедительного хода мыслей. Наша цель в том чтобы определить путь к саморазвитию через тяжелый труд и взращивание привычки к совершенству.'
           
         },
           {
-          iconic:'edu1.png',
+          iconic:'fas fa-users',
           color: 'brown darken-1',
+          timer:4300,
           icon: 'mdi-star',
           heading:'Люди',
           description:'Averroes не только предлагает отличный сервис для своих партнеров, но и фокусируется на саморазвитии людей внутри компании благодаря постоянному поощрению, мотивации и поддержке, чтобы они могли расти лично и становиться все более конкурентоспособными в глобальном рынке рабочей силы.'
         },
         {
-          iconic:'edu2.png',
+          iconic:'fas fa-money-check-alt',
           color: 'blue-grey darken-1',
           icon: 'mdi-book-variant',
+          timer:5300,
           heading:'Просвещение',
           description:'Люди, которые приходят к нам в поисках конкретных знаний, должны уйти с чувством вновь обретенной мудрости, исходящей от окружающей среды и инновационной учебной программы, которая заложит основу для непрерывного саморазвития и совершенствования.'
         },  {
-           iconic:'edu3.png',
+           iconic:'fas fa-bullseye',
           color: 'cyan ',
           icon: 'mdi-airballoon',
+          timer:6300,
           heading:'Нацеленность на результат',
           description:'В качестве поставщиков доступного образования для масс наша воля заключается в том, чтобы обеспечить тем, кто стремится к лучшему будущему, средствами и результатами, которые они заслуживают'
         }]
@@ -157,6 +169,19 @@ export default {
    height:3rem;
     width:190px;
 
+}
+.photo{
+  z-index: 10;
+}
+#icon_main{
+  font-size:4rem;
+   color:rgba(255, 253, 253, 0.774); 
+   align-content: center; 
+  position: relative;
+}
+.title_fonts{
+   font-family: 'Comfortaa', cursive;
+   font-size: 1.1rem;
 }
 </style>
 
