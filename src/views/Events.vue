@@ -28,8 +28,8 @@
                dark
             column
           >
-            <h1 class="title_beauty p-2 text-xs-center" style="color:#c7b3a2">We are always ahead</h1>
-            <div class="mr-4 title_font text-xs-center col"><p>We provide premium customer support and offer affiliate programs.</p>
+            <h1 class="title_beauty p-2 mt-5 text-xs-center" >Наши последние посты</h1>
+            <div class="mr-4 title_font text-xs-center col">
              <hr class="deep-black accent-2 mt-0 d-inline-block mx-auto" style="width: 10%;">
             </div>
          
@@ -58,13 +58,13 @@
         <v-card-title primary-title>
           <div>
             <div class="headline">{{i.title}}</div>
-            <span class="grey--text">{{i.date}}-be with us</span>
+         
           </div>
         </v-card-title>
 
         <v-card-actions>
           
-          <v-btn :to="'/event/'+i.id" flat color="purple">More...</v-btn>
+          <v-btn class="text-xs-center" :to="'/event/'+i.id" flat large outline  round color="blue darken-2">подробно <v-icon>keyboard_arrow_right</v-icon></v-btn>
           <v-spacer></v-spacer>
           <v-btn icon @click="i.id=!i.id">
             <v-icon>{{ i.id ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>

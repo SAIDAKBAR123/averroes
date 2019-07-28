@@ -49,11 +49,11 @@
             <v-card color="transparent" tile flat>
               
               <v-layout col wrap>
-                  <v-flex  data-aos="fade-up"  xs12 md12 v-for="i in def" :key="i.title">
+                  <v-flex xs12  data-aos="fade-up"  xs12 md12 v-for="i in def" :key="i.title">
                      <v-card dark color="grey lighten-5 m-2" class="white--text">
-              <v-layout justify-center align-center>
-                <v-flex xs3>
-                  <v-avatar size="110">
+              <v-layout col wrap justify-center align-center>
+                <v-flex xs12 md4 offset-xs3> 
+                  <v-avatar class="m-3" size="110">
                   <v-img
                     :src="require('../assets/img/'+i.icon)"
                    
@@ -61,7 +61,7 @@
                   ></v-img>
                   </v-avatar>
                 </v-flex>
-                <v-flex xs7>
+                <v-flex xs12 md10>
                   <v-card-title primary-title>
                     <div class="black--text">
                       <div class="headline">{{i.title}}</div>

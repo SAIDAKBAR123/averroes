@@ -61,7 +61,7 @@
          <v-flex xs12 sm12 md4>
               <v-layout column wrap>
               <v-flex xs12 sm12 md12 offset-md2>
-                    <h2 class="mt-4 pl-3">Kатегория</h2>
+                    <h2 class="title_beauty mt-4 pl-3">Kатегория</h2>
               </v-flex>
               <v-flex xs12 sm6 md12 offset-md2>
                    <v-card color="yellow" tile flat>
@@ -69,86 +69,48 @@
           <template v-for="(item, index) in events">
             <v-list-tile
               :key="index"
-              @click=""
+             :to="'/event/'+item.id"
+              class="tile"
+              ripple
             >
               <v-list-tile-action>
-                <v-icon> done </v-icon>
+                <v-icon> arrow_forward_ios</v-icon>
               </v-list-tile-action>
             
               <v-list-tile-content>
-                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                <v-list-tile-title class="tile_title title_beauty font-weight-bold">{{ item.title }}</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
           </template>
         </v-list>
             </v-card>
               </v-flex>
-              <v-flex xs12 sm6 md12 offset-md2 justify-start>
-                <v-flex xs12 md12 offset-md2>
-                  <h4 class="instagram mb-4"> Follow Us on Instagram</h4>
+              <v-flex class="mb-2 mt-3" xs12 sm6 md12 offset-md2 justify-start>
+                <v-flex xs12 md12 >
+                   <h2 class="title_beauty mb-4"> Следите за нами в инстаграм</h2>
                 </v-flex>
-                <v-card color="blue" height="300">
-              <v-layout row wrap>
-               <v-flex
-              v-for="n in 9"
-              :key="n"
-              xs3
-              
-              d-flex
-            >
-              <v-card elevation="10" flat tile class="d-flex">
-                <v-img
-                
-                  :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-                  :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
-                  aspect-ratio="1"
-                  class="grey lighten-2 mx-auto zooming"
-                >
-                  <template v-slot:placeholder>
-                    <v-layout
-                      fill-height
-                      align-center
-                      justify-center
-                      ma-0
-                    >
-                      <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-                    </v-layout>
-                  </template>
-                </v-img>
-              </v-card>
-            </v-flex>
-            </v-layout>
+                <v-card color="transparent" tile flat>
+             <div class="elfsight-app-081b7506-5c93-422d-98f7-f982c0025854"></div>
                 </v-card>
               </v-flex>
               <v-flex xs12 md12 sm6 offset-md2>
                  <v-list three-line>
-          <template v-for="(item, index) in events">
-            <v-subheader
-              v-if="item.title"
-              :key="item.title"
-            >
-              {{ item.title }}
-            </v-subheader>
-
-            <v-divider
-              v-else-if="true"
-              :key="index"
-              :inset="true"
-            ></v-divider>
-
+                    <h2 class="title_beauty p-1 mt-5 pb-2 mb-3">Наши последние посты</h2>
+         <template v-for="(item, index) in events">
             <v-list-tile
-              v-else
+             
               :key="item.title"
               avatar
-              @click="events(item.id)"
+              :to="'/event/'+item.id"
             >
-              <v-list-tile-avatar>
+              <v-list-tile-avatar class="mt-1" size="60">
                 <img :src="item.imageUrl">
               </v-list-tile-avatar>
 
-              <v-list-tile-content>
-                <v-list-tile-title v-html="item.title"></v-list-tile-title>
-                <v-list-tile-sub-title v-html="item.date"></v-list-tile-sub-title>
+              <v-list-tile-content class="p-3">
+                <v-list-tile-title class="tile_title" v-html="item.title"></v-list-tile-title>
+                <v-spacer></v-spacer>
+                <v-list-tile-sub-title v-html="item.description.substring(0,40)+'&#8230;&#8230;'"></v-list-tile-sub-title>
               </v-list-tile-content>
             </v-list-tile>
           </template>
@@ -185,12 +147,12 @@ export default {
         
           navgation: [
         {
-          text: 'Home',
+          text: 'Главная',
           disabled: true,
           href: '/'
         },
         {
-          text: 'Events',
+          text: 'Событие',
           disabled: true,
           href: 'events'
         },
@@ -218,5 +180,18 @@ export default {
 </script>
 
 <style scoped>
+
+.tile {
+    margin: 5px;
+    border-radius: 20px;
+  }
+  .tile:hover {
+    background: rgba(207, 204, 204, 0.836);
+    color: white;
+    border-radius: 20px;
+  }
+  .tile_title:hover{
+color: rgb(68, 68, 68)
+  }
 
 </style>
