@@ -213,5 +213,8 @@ export default {
   .tile_title:hover{
 color: rgb(68, 68, 68)
   }
+.text_des{
+font-size:16pt;
 
+}
 </style>

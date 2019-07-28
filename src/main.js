@@ -19,6 +19,7 @@ import SubFooter from './components/Footer/SubFooter.vue'
 //import VueQuillEditor from 'vue-quill-editor'
 import * as firebase from 'firebase';
 import AOS from 'aos';
+import Paginate from 'vuejs-paginate'
 
 // require styles
 /*import 'quill/dist/quill.core.css'
@@ -35,6 +36,7 @@ Vue.use(YmapPlugin, settings)
 Vue.use(VeeValidate);
 Vue.use(Carousel3d);
 Vue.use(VueInstagram)
+Vue.component('paginate', Paginate)
 //Vue.use(VueQuillEditor)
 
 Vue.config.productionTip = false

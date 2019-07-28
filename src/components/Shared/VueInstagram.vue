@@ -1,10 +1,11 @@
 <template>
 <div class="my-2">
+      <h1 class="title_beauty text-xs-center p-1 mt-3 pb-2 mb-3">Наши последние посты</h1>
  <v-container>
     <v-layout row wrap  justify-space-around justify-start align-start>
       <v-flex md4 xs12>
-        <h1 class="title_beauty text-xs-center p-1 mt-3 pb-2 mb-3">Наши последние посты</h1>
-        <v-card class="" dark color="green">
+    
+        <v-card tile class="" dark color="green">
            <v-list three-line>
             
           <template v-for="(item, index) in events">
@@ -29,7 +30,7 @@
         </v-card>
       </v-flex>
     <v-flex class="hidden-sm-and-down" md8 xs12>
-       <h1 class="title_beauty instagram text-xs-center p-1 mt-3 pb-2 mb-3">Следите за нами в инстаграм</h1>
+      
      <!-- <div class="text-xs-center col">
        <h1 class="instagram ">Instagram</h1><v-spacer></v-spacer>
 <v-btn color="blue"  href="https://www.instagram.com/averroes.consulting/" dark>Follow</v-btn>

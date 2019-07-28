@@ -78,6 +78,23 @@
         </v-slide-y-transition>
       </v-card>
     </v-flex>
+    <v-flex xs12 sm6 offset-sm3>
+ <paginate
+    :page-count="20"
+    :page-range="3"
+    :margin-pages="2"
+    :click-handler="clickCallback"
+    :prev-text="'Prev'"
+    :next-text="'Next'"
+    :container-class="'pagination'"
+    :page-class="'page-item'">
+  </paginate>
+
+   <v-pagination
+      v-model="page"
+      :length="6"
+    ></v-pagination>
+    </v-flex>
         </v-layout>
          <v-sub-footer/>
     </div>
@@ -88,6 +105,7 @@ export default {
 data(){
   return {
     show:null,
+    page:1,
       items: [
         {
           text: 'Главная',
@@ -109,12 +127,17 @@ computed:{
      loading(){
            return this.$store.getters.loading
        
+       },
+       page(){
+
        }
 
 
    },
    methods:{
-   
+     clickCallback (pageNum) {
+      console.log(pageNum)
+    }
    }
 
 }
