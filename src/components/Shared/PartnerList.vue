@@ -25,12 +25,12 @@ export default {
 data(){
     return{
           partners:[
-      {  
-        name:'CFA institute',
-        description:'CFA Institute is a global association of investment professionals. The organization offers the Chartered Financial Analyst designation, the Certificate in Investment Performance Measurement designation, and the Investment Foundations Certificate',
-        link:'https://2pmkvg9bi3-flywheel.netdna-ssl.com/wp-content/uploads/2016/08/CFA_institute_CMYK.jpg',
-        photo:'partner-1.png',
-        hyperlink:'https://www.cfainstitute.org/'
+       {  
+        name:'LSBF',
+        description:'London School of Business & Finance offers industry-focused programmes designed to reflect global market trends. LSBF attracts the most talented and ambitious candidates globally, and works together with its corporate partners to develop programmes structured with an up-to-date and international perspective in mind',
+        link:'http://americancollege.lk/wp-content/uploads/2016/09/LSBF.png',
+        photo:'partner-4.png',
+        hyperlink:'https://www.lsbf.org.uk/'
     },
     {  
         name:'ACCA',
@@ -46,13 +46,7 @@ data(){
         photo:'partner-3.png',
         hyperlink:'https://kaplan.com/'
     },
-    {  
-        name:'LSBF',
-        description:'London School of Business & Finance offers industry-focused programmes designed to reflect global market trends. LSBF attracts the most talented and ambitious candidates globally, and works together with its corporate partners to develop programmes structured with an up-to-date and international perspective in mind',
-        link:'http://americancollege.lk/wp-content/uploads/2016/09/LSBF.png',
-        photo:'partner-4.png',
-        hyperlink:'https://www.lsbf.org.uk/'
-    }
+  
     ]
     }
 }

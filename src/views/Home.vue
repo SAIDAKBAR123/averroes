@@ -132,7 +132,7 @@ VueInstagram,
        
         color:[
           {
-          icon:'fas fa-funnel-dollar',
+          icon:'fas fa-hands-helping',
           color:'#c7b3a2',
            title:'Sales & Trading',
            icon_color:'white',
@@ -150,7 +150,7 @@ VueInstagram,
         
             },
           {
-            icon:'fas fa-money-check-alt',
+            icon:'fas fa-book-open',
             color:'#222326',
             title:'Market Research',
             icon_color:'white',

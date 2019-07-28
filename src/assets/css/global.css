@@ -127,6 +127,8 @@ padding-bottom: 50px;
   background-image: url('../img/service_test.jpg');
   background-size:cover;
  }
-
+ .tile_title:hover{
+  color:rgb(109, 5, 5);
+    }
  /*-------------animations--------------*/
  

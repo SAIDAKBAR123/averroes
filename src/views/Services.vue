@@ -8,7 +8,6 @@
             justify-center
             class="white--text"
           >
-    
             <h1 class="white--text mb-2 title_font text-xs-center text-uppercase">услуги</h1>
             <div class="headline mb-3 text-xs-center">
                   <v-breadcrumbs dark :items="items">
@@ -37,46 +36,29 @@
          </v-card>
         </v-layout>
      <v-container>
-          <v-layout class="space_middle" row wrap>
-          <v-flex md4 lg6 xs12 sm4>
-            <v-card width="520" height="100%" color="red">
-              <v-img height="100%"  src="http://career.iresearchnet.com/wp-content/uploads/2014/06/Telephone-Operator.jpg">
-
+          <v-layout row wrap>
+          <v-flex md6  xs12 sm12>
+            <v-card flat width="520" height="100%" color="transparent">
+              <v-img tile flat height="100%"  src="http://career.iresearchnet.com/wp-content/uploads/2014/06/Telephone-Operator.jpg">
+                  <div class="overlay">
+                     <p class="quote title_crilic">&#8220;{{des }} &#8221;</p> 
+                     <div class="col">
+                       <p class="title_crilic ml-4 p-3" v-for="(service,i) in services" :key="i" ><v-icon>done_all</v-icon> {{service.title}}</p>
+                     </div>
+                  </div>
               </v-img>
             </v-card>
           </v-flex>
-          <v-flex md6 lg6 xs12 sm4>
-            <v-card color="transparent" tile flat>
-              
-              <v-layout col wrap>
-                  <v-flex xs12  data-aos="fade-up"  xs12 md12 v-for="i in def" :key="i.title">
-                     <v-card dark color="grey lighten-5 m-2" class="white--text">
-              <v-layout col wrap justify-center align-center>
-                <v-flex xs12 md4 offset-xs3> 
-                  <v-avatar class="m-3" size="110">
-                  <v-img
-                    :src="require('../assets/img/'+i.icon)"
-                   
-                    contain
-                  ></v-img>
-                  </v-avatar>
-                </v-flex>
-                <v-flex xs12 md10>
-                  <v-card-title primary-title>
-                    <div class="black--text">
-                      <div class="headline">{{i.title}}</div>
-                      <div class="body">❖ {{i.pro1}}</div>
-                      <div  class="body">❖ {{i.pro2}}</div>
-                      <div  class="body">❖ {{i.pro3}}</div>
-                    </div>
-                  </v-card-title>
-                </v-flex>
-              </v-layout>
-              
-             
-            </v-card>
-                  </v-flex>
-              </v-layout>
+          <v-flex md6  xs12 sm12>
+            <v-card flat width="520" height="100%" color="transparent">
+              <v-img tile flat height="100%"  src="http://career.iresearchnet.com/wp-content/uploads/2014/06/Telephone-Operator.jpg">
+                  <div class="overlay">
+                     <p class="quote title_crilic">&#8220;{{des }} &#8221;</p> 
+                     <div class="col">
+                       <p class="title_crilic ml-4 p-3" v-for="(service,i) in services" :key="i" ><v-icon>done_all</v-icon> {{service.title}}</p>
+                     </div>
+                  </div>
+              </v-img>
             </v-card>
           </v-flex>
         
@@ -91,6 +73,26 @@
 export default {
 data(){
     return{
+   
+            des:'Averroes Consulting помогает образовательным учреждениям (в том числе университетам, высшим учебным заведениям и частным образовательным центрам) в разработке методологии проведения курсов. Разработка методологии будет состоять из следующего'
+     ,
+     services:[
+       {
+         title:'Выявление результатов обучения'
+       },
+        {
+         title:'Внедрение образовательных стратегий в целях разработки инструментов для измерения достижения результатов'
+       },
+        {
+         title:'Создание системы оценки курса, используя технологические инструменты'
+       },
+        {
+         title:'Контролирование системы оценки курса путем создания учебной программы курса'
+       },
+        {
+         title:'Установление ключевых критериев оценки эффективности курса'
+       }
+     ],
           items: [
         {
           text: 'Главная',
@@ -104,42 +106,29 @@ data(){
         },
       
       ],
-      def:[
-        {
-          title:'ACCA courses',
-          pro1:'Basics and advanced understanding of IFRS',
-          pro2:'Application of Financial and Managerial Accounting concepts in practice',
-          pro3:'Excel for financial managers',
-          icon:'icon4.png'
-        },
-        {
-          title:'Visa support',
-          pro1:'Documentation support',
-          pro2:'Interview preparation',
-          pro3:'Personal travel manager',
-           icon:'icon3.png'
-        },
-        {
-          title:'Educational consultancy',
-          pro1:'Study abroad',
-          pro2:'Course Design development',
-          pro3:'Educational strategy',
-           icon:'icon2.png'
-        },
-        {
-          title:'Professional courses',
-          pro1:'Financial Management',
-          pro2:'Excel for professional use + Business Analytics',
-          pro3:'English courses',
-           icon:'icon1.png'
-        }
-
-      ]
+      
     }
 }
 }
 </script>
 
-<style>
+<style scoped>
+.overlay{
+background-color: rgba(229, 233, 233, 0.76);
+height: 100%;
+}
+.quote{
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: rgb(48, 48, 48);
+ font-weight: 400;
+  font-size: 1.2rem;
+  padding-top: 5%;
+  padding-left: 8%;
+   padding-right: 8%;
+  margin:5px;
+  justify-content: center;
+  
+}
 
 </style>

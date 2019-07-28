@@ -99,7 +99,7 @@
               
                     <v-list three-line>
                <h2 class="title_beauty p-1 mt-5 pb-2 mb-3">Наши последние посты</h2>
-          <template v-for="(item, index) in events">
+          <template v-for="item in events">
             <v-list-tile
              
               :key="item.title"
@@ -203,16 +203,14 @@ export default {
 
 .tile {
     margin: 5px;
-    border-radius: 20px;
+   
   }
   .tile:hover {
     background: rgba(207, 204, 204, 0.836);
     color: white;
-    border-radius: 20px;
+   
   }
-  .tile_title:hover{
-color: rgb(68, 68, 68)
-  }
+ 
 .text_des{
 font-size:16pt;
 

@@ -14,11 +14,11 @@
         <h5 class="white--text text-uppercase font-weight-bold">Averroes Consulting</h5>
         <hr class="white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
        
-        <p>
+        <p class="title_crilic a_hover">
       <v-icon dark>home</v-icon><span class="ml-1">Узбекистан, город Ташкент, Чиланзар 7 квартал, улица Мукимия, 160 - Чиланзарский район Главная дорога Мукимия</span></p>
-        <p>
+        <p class="title_crilic a_hover">
           <v-icon dark>email</v-icon><span class="ml-1">averroesconsulting@gmail.com</span></p>
-        <p>
+        <p class="title_crilic a_hover">
           <v-icon dark color="grey deep-darken 2">phone</v-icon><span class="ml-1"> + 998(97) 770-99-25</span></p>
      
 
@@ -31,8 +31,8 @@
         <!-- Links -->
         <h5 class=" white--text text-uppercase font-weight-bold">услуги</h5>
         <hr class="white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p class="white--text" v-for="i in uslugi" :key="i">
-         <a class="white--text" :href="'http://averroes.uz/#/courses/'+i" target="_blank" rel="noopener noreferrer">{{i}}</a>
+        <p class="title_crilic a_hover" v-for="i in uslugi" :key="i">
+         <a class="a_hover" :href="'http://averroes.uz/#/service/'+i" target="_blank" rel="noopener noreferrer">{{i.title}}</a>
         
         </p>
       
@@ -44,8 +44,8 @@
         <!-- Links -->
         <h5 class=" white--text text-uppercase font-weight-bold">Курсы</h5>
         <hr class="white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p class="white--text" v-for="course in courses" :key="course.id">
-         <a class="white--text" :href="'http://averroes.uz/#/courses/'+course.id" target="_blank" rel="noopener noreferrer">{{course.title}}</a>
+        <p class="title_crilic a_hover" v-for="course in courses" :key="course.id">
+         <a class="title_crilic a_hover" :href="'http://averroes.uz/#/courses/'+course.id" target="_blank" rel="noopener noreferrer">{{course.title}}</a>
         
         </p>
       
@@ -73,7 +73,19 @@ export default {
     data () {
       return {
         uslugi:[
-         'ACCA courses','Визовая поддержка','Образовательная консультация','Профессиональные курсы'
+         {
+           title:'Разработка методологии',
+        },
+         {
+            title: 'Учебная литература',
+         },
+         {
+            title:'Стратегия образования',
+         },
+         {
+           title:'Профессиональные курсы'
+         }
+
         ],
       name: '',
       email: '',
@@ -149,6 +161,13 @@ export default {
 
 </script>
 
-<style>
-
+<style scoped>
+.a_hover{
+  color: white;
+  transition: transform .2s; 
+}
+.a_hover:hover{
+  color:red;
+ transform: scale(1.033);
+}
 </style>

@@ -5,10 +5,10 @@
     <v-layout row wrap  justify-space-around justify-start align-start>
       <v-flex md4 xs12>
     
-        <v-card tile class="" dark color="green">
+        <v-card tile class="" dark color="transparent">
            <v-list three-line>
             
-          <template v-for="(item, index) in events">
+          <template v-for="item in events">
             <v-list-tile
              
               :key="item.title"
@@ -19,7 +19,7 @@
                 <img :src="item.imageUrl">
               </v-list-tile-avatar>
 
-              <v-list-tile-content class="p-3">
+              <v-list-tile-content class="p-3 tile_title">
                 <v-list-tile-title v-html="item.title"></v-list-tile-title>
                 <v-spacer></v-spacer>
                 <v-list-tile-sub-title v-html="item.description.substring(0,40)+'&#8230;&#8230;'"></v-list-tile-sub-title>
