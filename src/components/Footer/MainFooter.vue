@@ -29,16 +29,28 @@
       <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
 
         <!-- Links -->
+        <h5 class=" white--text text-uppercase font-weight-bold">услуги</h5>
+        <hr class="white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p class="white--text" v-for="i in uslugi" :key="i">
+         <a class="white--text" :href="'http://averroes.uz/#/courses/'+i" target="_blank" rel="noopener noreferrer">{{i}}</a>
+        
+        </p>
+      
+
+      </div>
+
+     <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+
+        <!-- Links -->
         <h5 class=" white--text text-uppercase font-weight-bold">Курсы</h5>
         <hr class="white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p class="white--text" v-for="(course,i) in courses" :key="course.id">
+        <p class="white--text" v-for="course in courses" :key="course.id">
          <a class="white--text" :href="'http://averroes.uz/#/courses/'+course.id" target="_blank" rel="noopener noreferrer">{{course.title}}</a>
         
         </p>
       
 
       </div>
-    
 
     </div>
     <!-- Grid row -->
@@ -60,6 +72,9 @@
 export default {  
     data () {
       return {
+        uslugi:[
+         'ACCA courses','Визовая поддержка','Образовательная консультация','Профессиональные курсы'
+        ],
       name: '',
       email: '',
       subject:'',

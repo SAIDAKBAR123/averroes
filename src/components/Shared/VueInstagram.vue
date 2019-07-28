@@ -1,10 +1,10 @@
 <template>
 <div class="my-2">
  <v-container>
-    <v-layout row wrap align-baseline justify-center>
-      <v-flex md6 xs12>
-        <h1 class="title_beauty text-xs-center mb-4 p-1 ">Наши последние посты</h1>
-        <v-card class="mt-5" dark color="green">
+    <v-layout row wrap  justify-space-around justify-start align-start>
+      <v-flex md4 xs12>
+        <h1 class="title_beauty text-xs-center p-1 mt-3 pb-2 mb-3">Наши последние посты</h1>
+        <v-card class="" dark color="green">
            <v-list three-line>
             
           <template v-for="(item, index) in events">
@@ -28,9 +28,9 @@
         </v-list>
         </v-card>
       </v-flex>
-    <v-flex class="hidden-sm-and-down" md6 xs12>
+    <v-flex class="hidden-sm-and-down" md8 xs12>
      
-      <div class="text-xs-center col">
+     <!-- <div class="text-xs-center col">
        <h1 class="instagram ">Instagram</h1><v-spacer></v-spacer>
 <v-btn color="blue"  href="https://www.instagram.com/averroes.consulting/" dark>Follow</v-btn>
 
@@ -99,9 +99,13 @@
     
 </vue-instagram>
 </vue-custom-scrollbar>
-</div>
+</div>-->
+
+<div class="elfsight-app-081b7506-5c93-422d-98f7-f982c0025854"></div>
+
+
  </v-flex>
-     
+  
     </v-layout>
   </v-container>
   <v-layout>

@@ -38,7 +38,7 @@
          <v-flex   xs12 sm4 md2 v-for="i in descriptions" :key="i.subtitle">
 
             <div data-aos="flip-right"  class="text-xs-center">
-              <v-card :color="i.color" class="elevation-10 mt-5 mr-3">
+              <v-card dark color="red darken-1" class="elevation-10 mt-5 mr-3">
                 <div class="pt-4" > 
                 <i style="font-size:4rem; color:#fff" :class="i.icon"></i>
                </div>
@@ -56,7 +56,7 @@
               <h1 class="title_beauty text-xs-center mb-3 pb-2">Главные ценности</h1>
           </v-flex>
             <v-flex  xs12 md3 v-for="i in about" :key="i.iconic">
-              <v-card data-aos="fade-up" data-aos-duration="4000" dark tile :color="i.color">
+              <v-card height="25rem" data-aos="fade-up" data-aos-duration="4000" dark tile color="red darken-1">
                 <div  class="elevation-10" style="about_page">
                   <p class="text-xs-center title_crilic_big">{{i.heading}}</p>
                 </div>

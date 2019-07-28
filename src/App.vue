@@ -59,8 +59,18 @@
           <v-list-tile-title>{{ item.title }}</v-list-tile-title>
         </v-list-tile>
       </v-list>
+     
     </v-menu>
     </v-list-tile>
+      <v-list-tile
+         class=" hidden-sm-and-down"
+          v-for="(item ,i) in menuList2" :key="i"
+          :to="item.route"
+           >
+            <v-toolbar-items>
+        <v-btn dark round flat class="title_font">{{item.title}}</v-btn>
+            </v-toolbar-items>
+          </v-list-tile>
           <v-spacer></v-spacer>
 
            <v-list-tile v-for="item in social" :key="item.type" 
@@ -163,6 +173,13 @@ export default {
                 route: '/services'
             },
          
+           
+        ]
+          
+    },
+     menuList2 (){
+        return[
+
             {
                  icon:'',
                 title:'События',
