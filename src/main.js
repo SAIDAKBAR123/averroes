@@ -17,7 +17,10 @@ import Gallery from './components/Shared/Gallery.vue'
 import SubFooter from './components/Footer/SubFooter.vue'
 
 //import VueQuillEditor from 'vue-quill-editor'
-import * as firebase from 'firebase';
+import  firebase from 'firebase/app';
+import 'firebase/auth'
+import 'firebase/database'
+import 'firebase/storage'
 import AOS from 'aos';
 import Paginate from 'vuejs-paginate'
 

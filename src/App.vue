@@ -32,7 +32,7 @@
       <v-spacer></v-spacer>
      <v-list-tile
          class=" hidden-sm-and-down"
-          v-for="(item ,i) in menuList" :key="i"
+          v-for="(item ,i) in menuList" :key="item.route"
           :to="item.route"
            >
             <v-toolbar-items>
@@ -53,7 +53,7 @@
       <v-list>
         <v-list-tile
           v-for="(item, index) in courses"
-          :key="index"
+          :key="item.id"
           :to="'/courses/'+item.id"
         >
           <v-list-tile-title class="title_crilic " style="font-size:10pt;">{{ item.title }}</v-list-tile-title>
@@ -64,7 +64,7 @@
     </v-list-tile>
       <v-list-tile
          class=" hidden-sm-and-down"
-          v-for="(item ,i) in menuList2" :key="i"
+          v-for="(item ,i) in menuList2" :key="item.route"
           :to="item.route"
            >
             <v-toolbar-items>

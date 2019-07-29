@@ -31,7 +31,7 @@
         <!-- Links -->
         <h5 class=" white--text text-uppercase font-weight-bold">услуги</h5>
         <hr class="white accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p class="title_crilic a_hover" v-for="i in uslugi" :key="i">
+        <p class="title_crilic a_hover" v-for="(i,index) in uslugi" :key="index">
          <a class="a_hover" :href="'http://averroes.uz/#/service/'+i" target="_blank" rel="noopener noreferrer">{{i.title}}</a>
         
         </p>

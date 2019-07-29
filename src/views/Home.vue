@@ -1,14 +1,16 @@
 <template>
-<div >
+<div>
 
- <v-carousel  :height="totalHeight"  reverse-transition="fade"
+ <v-carousel :height="totalHeight"  reverse-transition="fade"
       transition="fadeIn"
       delimiter-icon
       hide-delimiters
       next-icon="navigate_next"
       prev-icon="navigate_before"
+      
       >
     <v-carousel-item
+    
       v-for="(item,i) in items"
       :key="i"
       :src="item.src"
@@ -70,14 +72,14 @@
     <v-flex align-content-center md3 xs12 lg3 sm6>
        <v-card  height="400 " tile flat color="rgb(233, 231, 231)" dark >
             <v-card-title dark primary class="pt-5 justify-center icons title"><i style="color:grey" class="fas fa-bullseye"></i></v-card-title>
-            <h4 class="black--text text-xs-center title_font">Нацеленность на результат</h4>
+            <h4 class="black--text text-xs-center title_font p-1">Нацеленность на результат</h4>
             <v-card-text dark class="black--text text-xs-center">В качестве поставщиков доступного образования для масс наша воля заключается в том, чтобы обеспечить тем, кто стремится к лучшему будущему, средствами и результатами, которые они заслуживают</v-card-text>
           </v-card>
     </v-flex>
  <v-flex align-content-center md3 xs12 lg3 sm6 v-for="item  in color" :key="item.color"  >
           <v-card  height="400 " tile flat :color="item.color" dark >
             <v-card-title dark primary class="pt-5 justify-center icons title"><i :style="'color:'+item.icon_color" :class="item.icon"></i></v-card-title>
-            <h4 class="text-xs-center title_font">{{item.heading}}</h4>
+            <h4 class="text-xs-center title_font p-1">{{item.heading}}</h4>
             <v-card-text dark class=" text-xs-center">{{item.description}}</v-card-text>
           </v-card>
   </v-flex>
@@ -181,17 +183,17 @@ VueInstagram,
         intro:[
           {
           icon:'fas fa-graduation-cap',
-          title:'Market Forecasting',
+          title:'',
           text:'Образовательный опыт в атмосфере схожей Университетской по доступной для основного населения ценам;'
           },
               {
           icon:'fas fa-chart-line',
-          title:'Financial Modeling',
+          title:'',
           text:'Увеличение экономического роста и сокращение масштабов нищеты может быть достигнуто за счет предоставления выдающейся образовательной платформы, которая подходит даже для экономически неблагополучных слоев населения в странах;'
          },
               {
           icon:'far fa-handshake',
-          title:'Financial Analysis',
+          title:'',
           text:'Личная ответственность за успеваемость ученика и установление его мышления как глобального гражданина, который стремится создать позитивные изменения в социуме.'
           }
         ],

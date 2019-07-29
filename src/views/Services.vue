@@ -64,7 +64,7 @@
           </v-flex>
         
         </v-layout>-->
-           <v-parallax  src='https://image.freepik.com/free-vector/abstract-red-line-black-background-business-card_41981-1024.jpg'  >
+           <v-parallax  :src="require('@/assets/img/img_mirror1.jpg')">
          <v-layout class="mt-5" row wrap>
              <v-flex md6  xs12 sm12>
                <h1 class="title_beauty white--text text-xs-center" >Averroes Consulting
@@ -94,7 +94,7 @@
           </v-flex>
       </v-layout>
  
- <v-parallax  src='https://image.freepik.com/free-vector/abstract-red-line-black-background-business-card_41981-1024.jpg' height="600" >
+ <v-parallax  :src="require('@/assets/img/image_mirror.jpg')" height="600" >
          <v-layout class="my-5" row wrap>
              
              <v-flex md6  xs12 sm12 order-xs2 order-md1>
