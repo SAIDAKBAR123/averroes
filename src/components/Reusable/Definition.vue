@@ -35,9 +35,9 @@
                     <h2 class="mt-4 pt-1 pr-1 pl-2 title_popins">{{course.title}}</h2>
               </v-flex>
               <v-flex xs12 sm6 md12>
-                   <v-card color="blue" tile flat>
+                   <v-card color="transparent" tile flat>
                    
-               <v-carousel hide-delimiters  height="300"   hide-controls>
+               <v-carousel hide-delimiters  height="340"   hide-controls>
                     <v-carousel-item
                   
                     :src="course.imageUrl"
@@ -80,7 +80,7 @@
               </v-list-tile-action>
             
               <v-list-tile-content>
-                <v-list-tile-title class="tile_title title_beauty font-weight-bold">{{ item.title }}</v-list-tile-title>
+                <v-list-tile-title class="tile_title title_crilic font-weight-bold">{{ item.title }}</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
           </template>

@@ -56,7 +56,7 @@
           :key="index"
           :to="'/courses/'+item.id"
         >
-          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          <v-list-tile-title class="title_crilic " style="font-size:10pt;">{{ item.title }}</v-list-tile-title>
         </v-list-tile>
       </v-list>
      
