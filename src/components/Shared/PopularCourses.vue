@@ -2,11 +2,8 @@
     <div class="space_middle">
         <v-layout>
              <v-flex dark justify-center md12 xs12 offset-(md)(3) >
-                      <h1 class="title_beauty text-xs-center">Популярные курсы</h1>
-                       <div class="new_times text-xs-center  mx-5 p-5"><p>
-                         Просмотрите самые популярные курсы от Averroes Consulting, чтобы продвинуться по карьерной лестнице в качестве финансового аналитика мирового уровня. 
-От финансового моделирования и оценки бизнеса до презентаций и навыков Excel - это самые популярные курсы Averroes Consulting по проведению финансового анализа.
-                           </p></div>
+                      <h1 class="title_beauty text-xs-center mb-5">Популярные курсы</h1>
+                  
                   </v-flex>
         </v-layout>
       <v-layout row wrap offset-md1>

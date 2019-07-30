@@ -35,8 +35,8 @@
                     <v-card-text>
                         <v-layout col wrap align-center justify-center>
 
-                    <span class="pr-1 text-uppercase"> ПРИСОЕДИНЯЙТЕСЬ К НАШЕЙ ТЕЛЕГРАМ канал</span> <v-btn href="https://t.me/averroes_consulting"  large color="blue" round flat outline><i class="fab fa-telegram-plane mr-2"></i>  Telegram</v-btn>
-                     <span class="pr-1 text-uppercase">Присоединяйтесь к нашему каналу INSTAGRAM</span> <v-btn dark  color="pink lighten-1" href="http://instagram.com/averroes.consulting/"  large round flat outline><i class="fab fa-instagram mr-2"></i> Instagram</v-btn>
+                    <span class="pr-1 text-uppercase"> ПРИСОЕДИНЯЙТЕСЬ в НАШ ТЕЛЕГРАМ канал</span> <v-btn href="https://t.me/averroes_consulting" left  large color="blue" round flat outline><i class="fab fa-telegram-plane mr-2"></i>  Telegram</v-btn>
+                     <span class="pr-1 text-uppercase">Присоединяйтесь к нашему INSTAGRAM каналу</span> <v-btn dark  color="pink lighten-1" href="http://instagram.com/averroes.consulting/"  large round flat outline><i class="fab fa-instagram mr-2"></i> Instagram</v-btn>
                   </v-layout>
                     </v-card-text>
                 </v-card>

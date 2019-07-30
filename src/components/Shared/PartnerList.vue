@@ -1,5 +1,5 @@
 <template>
-    <div class="space_middle">
+    <div  class="space_middle">
         <v-layout justify-center align-center row wrap>
                  <v-flex dark justify-center md12 xs12 offset-(md)(3) >
                       <h1 class="title_beauty text-xs-center">Наши партнеры</h1>
@@ -10,7 +10,7 @@
                   </v-flex>
                   <v-flex  xs10 offset-(xs)(1) md2 offset-(md)(2)  v-for="item in partners" :key="item.name">
                    <v-container>
-                        <v-card tile flat>
+                        <v-card color="transparent" tile flat>
                      
                       <v-img aspect-ratio="1.7" contain :src="require('../../assets/img/'+item.photo)" />
                     </v-card>

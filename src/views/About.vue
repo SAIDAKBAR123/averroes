@@ -124,7 +124,7 @@ export default {
    
         about:[
         {
-           iconic:'fas fa-funnel-dollar',
+           iconic:'fas fa-hands-helping',
           timer:3300,
           icon: 'mdi-buffer',
           heading:'Убеждение',
@@ -140,7 +140,7 @@ export default {
           description:'Averroes не только предлагает отличный сервис для своих партнеров, но и фокусируется на саморазвитии людей внутри компании благодаря постоянному поощрению, мотивации и поддержке, чтобы они могли расти лично и становиться все более конкурентоспособными в глобальном рынке рабочей силы.'
         },
         {
-          iconic:'fas fa-money-check-alt',
+          iconic:'fas fa-book-open',
           color: 'blue-grey darken-1',
           icon: 'mdi-book-variant',
           timer:5300,

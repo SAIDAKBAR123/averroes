@@ -64,7 +64,7 @@
 
         <v-card-actions>
           
-          <v-btn class="text-xs-center" :to="'/event/'+i.id" flat large outline  round color="blue darken-2">подробно <v-icon>keyboard_arrow_right</v-icon></v-btn>
+          <v-btn class="text-xs-center" :to="'/event/'+i.id" flat small outline  round color="blue darken-2">подробно <v-icon>keyboard_arrow_right</v-icon></v-btn>
           <v-spacer></v-spacer>
           <v-btn icon @click="i.id=!i.id">
             <v-icon>{{ i.id ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
@@ -79,7 +79,7 @@
       </v-card>
     </v-flex>
     <v-flex xs12 sm6 offset-sm3>
- <paginate
+<!-- <paginate
     :page-count="20"
     :page-range="3"
     :margin-pages="2"
@@ -93,7 +93,7 @@
    <v-pagination
       v-model="page"
       :length="6"
-    ></v-pagination>
+    ></v-pagination>-->
     </v-flex>
         </v-layout>
          <v-sub-footer/>

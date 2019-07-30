@@ -1,7 +1,7 @@
 <template>
 <div>
 
- <v-carousel :height="totalHeight"  reverse-transition="fade"
+<v-carousel :height="totalHeight"  reverse-transition="fade"
       transition="fadeIn"
       delimiter-icon
       hide-delimiters
@@ -16,7 +16,7 @@
       :src="item.src"
     >
     <div class="flex-center">
-             <v-layout
+          <v-layout
             column
             align-center
             justify-center
@@ -33,7 +33,7 @@
    
   </v-carousel>
 
-  <v-card width="100%" flat tile class=" space_middle">
+  
   <v-layout  row wrap>
     <v-flex md12 sm12 xs12 >
        <v-card color="transparent" flat  tile>
@@ -69,32 +69,16 @@
   
 
   <v-layout   align-content-center justify-center row wrap>
-    <v-flex align-content-center md3 xs12 lg3 sm6>
-       <v-card  height="400 " tile flat color="rgb(233, 231, 231)" dark >
-            <v-card-title dark primary class="pt-5 justify-center icons title"><i style="color:grey" class="fas fa-bullseye"></i></v-card-title>
-            <h4 class="black--text text-xs-center title_font p-1">Нацеленность на результат</h4>
-            <v-card-text dark class="black--text text-xs-center">В качестве поставщиков доступного образования для масс наша воля заключается в том, чтобы обеспечить тем, кто стремится к лучшему будущему, средствами и результатами, которые они заслуживают</v-card-text>
-          </v-card>
-    </v-flex>
+    
  <v-flex align-content-center md3 xs12 lg3 sm6 v-for="item  in color" :key="item.color"  >
           <v-card  height="400 " tile flat :color="item.color" dark >
             <v-card-title dark primary class="pt-5 justify-center icons title"><i :style="'color:'+item.icon_color" :class="item.icon"></i></v-card-title>
-            <h4 class="text-xs-center title_font p-1">{{item.heading}}</h4>
-            <v-card-text dark class=" text-xs-center">{{item.description}}</v-card-text>
+            <h4 class="text-xs-center title_font m-1">{{item.heading}}</h4>
+            <v-card-text dark class=" text-xs-center m-2 ">{{item.description}}</v-card-text>
           </v-card>
   </v-flex>
   </v-layout>
-  </v-card>
-  
-  <!--team list-->
 
-
-<!--Opinions about averroes -->
-<v-layout>
-<v-flex>
-  
-</v-flex>
-</v-layout>
 <!-------Partner List ------>
 
 <v-courses></v-courses>
@@ -117,7 +101,7 @@ import VueInstagram from '../components/Shared/VueInstagram.vue'
     computed:{
     totalHeight(){
       let x =  screen.availHeight 
-      x=parseInt(x)-100;
+      x=parseInt(x);
       console.log(x)
       return x 
    }
@@ -133,9 +117,18 @@ VueInstagram,
       return {
        
         color:[
+             {
+          icon:'fas fa-bullseye',
+          color:'red darken-1',
+           title:'Sales & Trading',
+           icon_color:'white',
+             heading:'Нацеленность на результат',
+          description:'В качестве поставщиков доступного образования для масс наша воля заключается в том, чтобы обеспечить тем, кто стремится к лучшему будущему, средствами и результатами, которые они заслуживают'
+        
+          },
           {
           icon:'fas fa-hands-helping',
-          color:'#c7b3a2',
+          color:'red darken-2',
            title:'Sales & Trading',
            icon_color:'white',
              heading:'Убеждение',
@@ -144,7 +137,7 @@ VueInstagram,
           },
           {
             icon:'fas fa-users',
-            color:'#2b2c30',
+            color: 'red darken-3',
              title:'Investment Management',
              icon_color:'white',
               heading:'Люди',
@@ -153,7 +146,7 @@ VueInstagram,
             },
           {
             icon:'fas fa-book-open',
-            color:'#222326',
+            color:'red darken-4',
             title:'Market Research',
             icon_color:'white',
              heading:'Просвещение',
@@ -216,13 +209,13 @@ VueInstagram,
 <style scoped>
 
 .icons i{
-  font-size: 3rem;
+  font-size: 4rem;
 
 }
 .icon_big i{
  
   color:rgb(211, 211, 211);
-font-size: 5rem;
+font-size: 6rem;
 }
 
 </style>
