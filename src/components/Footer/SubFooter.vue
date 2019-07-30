@@ -2,11 +2,11 @@
     <div>
         <v-layout row wrap>
             <v-flex xs12 md6>
-                <v-card flat height="200" color="rgb(30, 29, 32,0.98)" dark tile>
+                <v-card flat color="rgb(30, 29, 32,0.98)" dark tile>
                        <y-map
   :coords="[41.294877250045,69.21974582265403]"
   zoom="14"
-  style="width: 100%; height:175px "
+style="width:100%; height:10rem"
   :cluster-options="{
     1: {clusterDisableClickZoom: true}
   }"

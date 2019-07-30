@@ -230,6 +230,7 @@ animation: slide-out 400ms ease-out forwards;
 
 .rombo{
   width: 350px;
+  z-index: 30;
  border-right: 0.5px solid rgba(209, 208, 208, 0.411);
   border-bottom: 0.5px solid rgba(202, 202, 202, 0.459);
 

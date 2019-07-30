@@ -1,5 +1,5 @@
 <template>
-<v-container fluid class="pa-0">
+<div>
 <v-layout row wrap>
   <v-flex md12 xs12 sm12 lg12>
 <v-carousel  :height="totalHeight"  reverse-transition="fade"
@@ -33,7 +33,7 @@
   </v-carousel>
 </v-flex>
 </v-layout>
-  
+  <v-container>
   <v-layout  row wrap>
     <v-flex md12 sm12 xs12 >
                <v-layout
@@ -56,21 +56,21 @@
       
         <v-card  flat  tile >
          <v-card-title dark primary class="justify-center icon_big title"><i  :class="item.icon"></i></v-card-title>
-            <v-card-title dark primary class="justify-center icons title_font">{{item.title}}</v-card-title>
-          <v-card-text class="text-center px-5 title_mplus">{{item.text}}</v-card-text>
+           <!-- <v-card-title dark primary class="justify-center icons title_font">{{item.title}}</v-card-title>-->
+          <v-card-text class="text-center px-3 title_mplus">{{item.text}}</v-card-text>
         </v-card>
 
     </v-flex>
     </v-layout>
   
-
+</v-container>
 <v-layout  align-center justify-center row wrap>
     
  <v-flex  md3 xs12 lg3 sm6 v-for="item  in color" :key="item.color"  >
-          <v-card  height="400 " tile flat :color="item.color" dark >
+          <v-card class="elevation-10" height="418" tile flat :color="item.color" dark >
             <v-card-title dark primary class="pt-5 justify-center icons title"><i :style="'color:'+item.icon_color" :class="item.icon"></i></v-card-title>
             <h4 class="text-xs-center title_font m-1">{{item.heading}}</h4>
-            <v-card-text dark class=" m-2 ">{{item.description}}</v-card-text>
+            <v-card-text dark class="text-xs-center  p-4">{{item.description}}</v-card-text>
           </v-card>
   </v-flex>
   </v-layout>
@@ -81,7 +81,7 @@
 <vue-instagram/>
  <partner-list/>
 <v-sub-footer/>
-</v-container>
+</div>
 </template>
 
 <script>
@@ -111,7 +111,7 @@ VueInstagram,
         color:[
              {
           icon:'fas fa-bullseye',
-          color:'grey darken-1',
+          color:'red darken-1',
            title:'Sales & Trading',
            icon_color:'white',
              heading:'Нацеленность на результат',
@@ -120,7 +120,7 @@ VueInstagram,
           },
           {
           icon:'fas fa-hands-helping',
-          color:'grey darken-2',
+          color:'red darken-2',
            title:'Sales & Trading',
            icon_color:'white',
              heading:'Убеждение',
@@ -129,7 +129,7 @@ VueInstagram,
           },
           {
             icon:'fas fa-users',
-            color: 'grey darken-3',
+            color: 'red darken-3',
              title:'Investment Management',
              icon_color:'white',
               heading:'Люди',
@@ -138,7 +138,7 @@ VueInstagram,
             },
           {
             icon:'fas fa-book-open',
-            color:'grey darken-4',
+            color:'red darken-4',
             title:'Market Research',
             icon_color:'white',
              heading:'Просвещение',

@@ -28,18 +28,12 @@
             </v-list-tile-content>
           </v-list-tile>
 <v-divider/>
-  <!-- <v-list-tile >
+ <v-list-tile >
       
            <v-list-tile-content>
-       <v-list-tile-title  >Russian</v-list-tile-title>
+       <v-list-tile-title  ><a href="tel: +998977709925">+ 998(97) 770-99-25</a></v-list-tile-title>
            </v-list-tile-content>
-        </v-list-tile>
-
-<v-list-tile>
-            <v-list-tile-content>
-               <v-list-tile-title >English</v-list-tile-title>
-            </v-list-tile-content>
-        </v-list-tile>-->
+   </v-list-tile>
      
         </v-list>
       </v-navigation-drawer>

@@ -1,12 +1,12 @@
 <template>
 <div class="my-2">
       <h1 class="title_beauty text-xs-center p-1 mt-3 pb-2 mb-3">Наши последние посты</h1>
- <v-container>
+ <v-container fluid>
     <v-layout row wrap  justify-space-around justify-start align-start>
-      <v-flex md4 xs12>
+      <v-flex  md4 xs12>
     
-        <v-card tile class="" dark color="transparent">
-           <v-list three-line>
+        <v-card height="420" tile  flat class=""  dark>
+           <v-list  three-line>
             
           <template v-for="item in events">
             <v-list-tile
@@ -109,11 +109,7 @@
   
     </v-layout>
   </v-container>
-  <v-layout>
-    <v-flex xs12 md12 justify-center align-center>
-   
-    </v-flex>
-  </v-layout>
+ 
  <!-- <div class="elfsight-app-081b7506-5c93-422d-98f7-f982c0025854"></div>-->
   </div>
 </template>

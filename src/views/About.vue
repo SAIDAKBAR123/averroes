@@ -1,7 +1,6 @@
 <template>
-  <div class="about">
-   
-     <v-parallax :src="require('@/assets/img/events_back.jpg')"   height="390">
+<div>
+     <!--<v-parallax :src="require('@/assets/img/events_back.jpg')" >
          
           <v-layout
             column
@@ -20,9 +19,30 @@
             </div>
           
           </v-layout>
+        </v-parallax>-->
+
+          <v-parallax class="service" height="390">
+          <v-layout
+            column
+            align-center
+            justify-center
+            class="mt-5 overlays white--text"
+          >
+    
+            <h1 class="white--text title_font text-xs-center">О нас</h1>
+            <div class="headline mb-3 text-xs-center">
+                <v-breadcrumbs dark :items="items">
+      <template v-slot:divider>
+        <v-icon>keyboard_arrow_right</v-icon>
+      </template>
+    </v-breadcrumbs>
+            </div>
+          
+          </v-layout>
+         
         </v-parallax>
-        
-        <v-layout row wrap class="space_middle">
+    
+        <v-layout row wrap class="my-5">
              <v-flex xs12 sm4 md5 >
             <div class=" ">
               <h2 class="title_beauty text-xs-center"> Миссия</h2>
@@ -30,7 +50,7 @@
               <p class="new_times_des py-10 px-5">
                Миссия Averroes Consulting состоит в том, чтобы стереть разрыв в возможностях, связанный с финансовыми трудностями молодежи в Узбекистане, благодаря инновационным методам обучения, которые помогают сократить время для абсолютного освоения предметов и в то же время обеспечить доступное образование. Averroes стремится реализовать свои основные ценности и цели благодаря своим корпоративным обещаниям
                 </p>
-               <hr class="grey darken-1 accent-2 mt-0 d-inline-block mx-auto" style="width: 10%;">
+               <hr class="grey darken-1 accent-2 d-inline-block mx-auto" style="width: 20%;">
              </v-layout>
             
             </div>
@@ -51,10 +71,10 @@
         
         </v-layout>
           <v-flex xs12 sm12 md12 >
-              <h1 class="title_beauty text-xs-center mb-3 pb-2">Главные ценности</h1>
+              <h1 class="title_beauty text-xs-center">Главные ценности</h1>
           </v-flex>
        <v-container>
-          <v-layout class="my-5"  row wrap>
+          <v-layout class="mt-2"  row wrap>
         
             <v-flex  xs12 md6  v-for="i in about" :key="i.iconic">
               <v-card  class="mx-auto" height="23rem" data-aos="zoom-out-down"   dark tile color="red darken-1">
@@ -75,10 +95,10 @@
             </v-flex>
         </v-layout>
        </v-container>
-      <team-list/> 
-        <partner-list/>
-        <v-sub-footer/>
-  </div>
+  <team-list/>
+  <partner-list/>
+  <v-sub-footer/>
+</div>
 </template>
 <script>
 import PartnerList from '../components/Shared/PartnerList.vue'

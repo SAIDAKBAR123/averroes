@@ -1,6 +1,6 @@
 <template >
 
-    <div  width="100%" style="background-color:#1c1b1f;">
+    <div class="backs">
 
   <!-- Footer Links -->
   <div class="container text-center text-md-left mt-5 pt-5">
@@ -171,5 +171,9 @@ export default {
 .a_hover:hover{
   color:red;
  transform: scale(1.033);
+}
+.backs{
+background-color:#1c1b1f;
+width: 105%;
 }
 </style>

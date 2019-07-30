@@ -62,7 +62,7 @@
       </v-card-text>
       <v-divider></v-divider>
       
-          <v-btn  class="text-xs-start p-2"  :to="'/courses/'+item.id" round large outline color="blue" >подробно <v-icon>keyboard_arrow_right</v-icon></v-btn>
+          <v-btn  class="text-xs-start p-2"  :to="'/courses/'+item.id" round  outline color="red darken-4" >подробно <v-icon>keyboard_arrow_right</v-icon></v-btn>
       
     </v-card>
   </v-hover>
@@ -70,7 +70,7 @@
 
 </v-layout>
 <v-layout class="mt-5" justify-center align-center>
-  <v-btn outline to="/courses" large round color="blue">View more...</v-btn>
+  <v-btn outline to="/courses" large round color="red darken-4">View more...</v-btn>
 </v-layout>
     </div>
 </template>
