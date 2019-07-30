@@ -1,7 +1,8 @@
 <template>
-<div>
-
-<v-carousel :height="totalHeight"  reverse-transition="fade"
+<v-container fluid class="pa-0">
+<v-layout row wrap>
+  <v-flex md12 xs12 sm12 lg12>
+<v-carousel  :height="totalHeight"  reverse-transition="fade"
       transition="fadeIn"
       delimiter-icon
       hide-delimiters
@@ -15,15 +16,13 @@
       :key="i"
       :src="item.src"
     >
-    <div class="flex-center">
+  <div class="flex-center">
           <v-layout
             column
             align-center
             justify-center
             class="white--text"
-          >
-           
-          
+          > 
             <h1 class="title_font white--text mb-2  text-xs-center">{{item.text}}</h1>
             <div class="title_playball mb-3 text-xs-center">Preparing your money is a daunting challenge for today's investors.</div>
          
@@ -32,17 +31,16 @@
     </v-carousel-item>
    
   </v-carousel>
-
+</v-flex>
+</v-layout>
   
   <v-layout  row wrap>
     <v-flex md12 sm12 xs12 >
-       <v-card color="transparent" flat  tile>
-          <v-flex xs12 sm12 md12 >
                <v-layout
                dark
             column
           >
-            <h1 class="title_beauty p-2 text-xs-center" >Что вы знаете о нас?</h1>
+            <h1 class="title_beauty mt-5 text-xs-center" >Что вы знаете о нас?</h1>
            
             <div class="mr-4 new_times font-weight-regular text-xs-center col"><p class="mx-5 px-5">Новые навыки и знания могут зажечь жизнь перемен. Averroes Consulting разработала и внедрила программы в сфере образования
   и экономические возможности, которые предоставляют изменяющие жизнь возможности тем, кто в них больше всего нуждается.</p>
@@ -50,13 +48,11 @@
             </div>
          
           </v-layout>
-          </v-flex>
-       
-         </v-card>
+        
     </v-flex>
     </v-layout>
-    <v-layout row wrap justify-center align-center>
-    <v-flex  md4 sm6 xs12 v-for="item in intro" :key="item.icon">
+  <v-layout row wrap justify-center align-center>
+    <v-flex  md4 sm12 xs12 v-for="item in intro" :key="item.icon">
       
         <v-card  flat  tile >
          <v-card-title dark primary class="justify-center icon_big title"><i  :class="item.icon"></i></v-card-title>
@@ -68,28 +64,24 @@
     </v-layout>
   
 
-  <v-layout   align-content-center justify-center row wrap>
+<v-layout  align-center justify-center row wrap>
     
- <v-flex align-content-center md3 xs12 lg3 sm6 v-for="item  in color" :key="item.color"  >
+ <v-flex  md3 xs12 lg3 sm6 v-for="item  in color" :key="item.color"  >
           <v-card  height="400 " tile flat :color="item.color" dark >
             <v-card-title dark primary class="pt-5 justify-center icons title"><i :style="'color:'+item.icon_color" :class="item.icon"></i></v-card-title>
             <h4 class="text-xs-center title_font m-1">{{item.heading}}</h4>
-            <v-card-text dark class=" text-xs-center m-2 ">{{item.description}}</v-card-text>
+            <v-card-text dark class=" m-2 ">{{item.description}}</v-card-text>
           </v-card>
   </v-flex>
   </v-layout>
 
-<!-------Partner List ------>
 
-<v-courses></v-courses>
-
+<v-courses/>
 <v-gallery/>
-
- 
 <vue-instagram/>
  <partner-list/>
 <v-sub-footer/>
-</div>
+</v-container>
 </template>
 
 <script>
@@ -119,7 +111,7 @@ VueInstagram,
         color:[
              {
           icon:'fas fa-bullseye',
-          color:'red darken-1',
+          color:'grey darken-1',
            title:'Sales & Trading',
            icon_color:'white',
              heading:'Нацеленность на результат',
@@ -128,7 +120,7 @@ VueInstagram,
           },
           {
           icon:'fas fa-hands-helping',
-          color:'red darken-2',
+          color:'grey darken-2',
            title:'Sales & Trading',
            icon_color:'white',
              heading:'Убеждение',
@@ -137,7 +129,7 @@ VueInstagram,
           },
           {
             icon:'fas fa-users',
-            color: 'red darken-3',
+            color: 'grey darken-3',
              title:'Investment Management',
              icon_color:'white',
               heading:'Люди',
@@ -146,7 +138,7 @@ VueInstagram,
             },
           {
             icon:'fas fa-book-open',
-            color:'red darken-4',
+            color:'grey darken-4',
             title:'Market Research',
             icon_color:'white',
              heading:'Просвещение',

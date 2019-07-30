@@ -2,7 +2,7 @@
   <v-app id="inspire">
     
    <v-toolbar  dense absolute color="transparent"  flat dark>
-      <v-toolbar-items class="hidden-sm-and-down" >
+      <v-toolbar-items class="hidden-sm-and-down">
     
             <div class="row">
                
@@ -14,8 +14,7 @@
                 </div>
                
              </div>
-       
-    
+
   </v-toolbar-items>
 
    

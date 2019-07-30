@@ -2,7 +2,7 @@
     <div>
         <v-layout row wrap>
             <v-flex xs12 md6>
-                <v-card flat height="190" color="rgb(30, 29, 32,0.98)" dark tile>
+                <v-card flat height="200" color="rgb(30, 29, 32,0.98)" dark tile>
                        <y-map
   :coords="[41.294877250045,69.21974582265403]"
   zoom="14"
