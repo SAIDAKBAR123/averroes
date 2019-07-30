@@ -18,8 +18,9 @@
       <v-icon dark>home</v-icon><span class="ml-1">Узбекистан, город Ташкент, Чиланзар 7 квартал, улица Мукимия, 160 - Чиланзарский район Главная дорога Мукимия</span></p>
         <p class="title_crilic a_hover">
           <v-icon dark>email</v-icon><span class="ml-1">averroesconsulting@gmail.com</span></p>
+        
         <p class="title_crilic a_hover">
-          <v-icon dark color="grey deep-darken 2">phone</v-icon><span class="ml-1"> + 998(97) 770-99-25</span></p>
+          <v-icon dark color="grey deep-darken 2">phone</v-icon><a href="tel: +998977709925">+ 998(97) 770-99-25</a> </p>
      
 
       </div>
