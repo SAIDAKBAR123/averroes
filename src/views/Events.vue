@@ -17,9 +17,7 @@
       </template>
     </v-breadcrumbs>
             </div>
-          
           </v-layout>
-         
         </v-parallax>
            <v-layout row wrap justify-center>
               <v-card flat  tile>
@@ -86,11 +84,11 @@
         <v-img
           :src="i.imageUrl"
          
-          height="210px"
+          height="220px"
         ></v-img>
       </v-flex>
       <v-flex xs12 md7>
-        <v-card class="my-2" height="210px">
+        <v-card class="my-2" height="220px">
         <v-card-title primary-title>
           <div>
             <h3 class="headline mb-0" v-text="i.title.substring(0,40)+'...'"></h3>
@@ -98,8 +96,8 @@
           </div>
         </v-card-title>
 
-        <v-card-actions>
-          <v-btn flat :to="'/event/'+i.id" color="red darken-1">Продолжить</v-btn><v-spacer></v-spacer><span class="p-2"><v-icon>access_time</v-icon></span><span class="my-2">{{i.date}}</span>
+        <v-card-actions class="mb-2 p-1">
+          <v-btn  flat :to="'/event/'+i.id" color="red darken-1">Продолжить</v-btn><v-spacer></v-spacer><span class="p-2"><v-icon>access_time</v-icon></span><span class="my-2" >{{formatDate(i.date)}}</span>
         </v-card-actions>
         </v-card>
         </v-flex>
@@ -145,8 +143,20 @@ data(){
       ]
   }
 },
+methods:{
 
+formatDate(d){
+  var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+ "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  var t = new Date(d);
+  return t.getDate()+'-'+monthNames[t.getMonth()]+'-'+t.getFullYear();
+}
+     
+
+},
 computed:{
+  
     events () {
         return this.$store.getters.loadedEvents 
     },
@@ -163,6 +173,6 @@ computed:{
 <style scoped>
 .top-banner{
 background-image: url('../assets/img/events_back.jpg');
-background-size: cover;
+
 }
 </style>
