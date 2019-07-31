@@ -181,7 +181,7 @@ export default {
 
             {
                  icon:'',
-                title:'События',
+                title:'Блог',
                 route: '/events'
             },
               {

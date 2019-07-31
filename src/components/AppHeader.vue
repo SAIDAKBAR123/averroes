@@ -1,10 +1,9 @@
 <template>
   <div class="elevate">
      <v-navigation-drawer
-       class="back-drawer"
+     
         v-model="drawer" 
-        fixed
-        hide-overlay
+      width="250"
          temporary
         app
       >
@@ -22,9 +21,11 @@
           v-for="(item ,i) in menuList" :key="i"
           :to="item.route"
            >
-  
+            <v-list-actions>
+              <v-icon> keyboard_arrow_right </v-icon>
+            </v-list-actions>
             <v-list-tile-content>
-              <v-list-tile-title class="title_font text-uppercase">{{item.title}}</v-list-tile-title>
+              <v-list-tile-title class="title_font text-uppercase"> {{item.title}}</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
 <v-divider/>
@@ -128,7 +129,7 @@ methods: {
             
             {
                  icon:'',
-                title:'События',
+                title:'Блог',
                 route: '/events'
             },
               {

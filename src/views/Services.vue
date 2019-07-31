@@ -64,7 +64,7 @@
           </v-flex>
         
         </v-layout>-->
-           <v-parallax  :src="require('@/assets/img/img_mirror1.jpg')">
+           <v-parallax  :src="require('@/assets/img/img_mirror1.png')">
          <v-layout class="mt-5" row wrap>
              <v-flex md6  xs12 sm12>
                <h1 class="title_beauty white--text text-xs-center" >Averroes Consulting
@@ -76,7 +76,7 @@
           </v-flex>
              <v-flex md6  xs12 sm12>
             <v-card flat width="100%" height="100%" color="transparent">
-              <p class="title_crilic white--text ml-4 p-3" v-for="(service,i) in services" :key="i" ><v-icon dark>done_all</v-icon> {{service.title}}</p>
+              <p class="title_crilic white--text ml-4 p-3" v-for="(service,i) in services" :key="i" ><v-icon dark>subdirectory_arrow_right</v-icon> {{service.title}}</p>
                  
             </v-card>
           </v-flex>
@@ -94,19 +94,23 @@
           </v-flex>
       </v-layout>
  
- <v-parallax  :src="require('@/assets/img/image_mirror.jpg')" height="600" >
+ <v-parallax  :src="require('@/assets/img/img_mirror.png')" height="600" >
          <v-layout class="my-5" row wrap>
              
              <v-flex md6  xs12 sm12 order-xs2 order-md1>
             <v-card justify-center align-center flat  color="transparent">
             <!--  <p class="title_crilic white--text ml-4 p-3" v-for="(service,i) in services2" :key="i" ><v-icon dark>{{service.icon}}</v-icon> {{service.title}}</p>-->
-                 <v-layout class="pl-5 pr-5" justify-center align-center row wrap fill-height>
+                 <v-layout class="pl-5 pr-5 " justify-center align-center row wrap fill-height>
                  <v-flex xs6 md6 sm6   v-for="service in services2" :key="service.title">
-                   <p  class="text-xs-center"><v-icon size="50" dark >{{service.icon}}</v-icon></p> 
-                    <v-card justify-center align-center class="m-1 overlay"  flat>
-                      <v-card-text >
-                        <p class="title_crilic icon_title text-xs-center white--text" >{{service.title}}</p>
+                     <p  class="text-xs-center p-2 mt-2"><v-icon size="50" dark >{{service.icon}}</v-icon></p> 
+                      
+                    <v-card height="65" justify-center align-center class="m-1 overlay"  flat>
+                    
+                     <v-layout row wrap align-center justify-center>
+                         <v-card-text >
+                        <p class="title_crilic  icon_title text-xs-center white--text" >{{service.title}}</p>
                       </v-card-text>
+                     </v-layout>
                     </v-card>
                  </v-flex>
                  </v-layout>
@@ -122,15 +126,19 @@
           </v-flex>
          </v-layout>
         
-        </v-parallax>
+</v-parallax>
   
-
+<partner-list/>
          <v-sub-footer/>
     </div>
 </template>
 
 <script>
+import PartnerList from '../components/Shared/PartnerList.vue'
 export default {
+  components:{
+    PartnerList,
+  },
 data(){
     return{
    
@@ -203,7 +211,7 @@ data(){
 
 <style scoped>
 .overlay{
-background-color: rgba(187, 186, 186, 0.534);
+background-color: rgba(187, 186, 186, 0.404);
 
 }
 .quote{
@@ -216,6 +224,7 @@ background-color: rgba(187, 186, 186, 0.534);
   justify-content: center;
 }
 .icon_title{
-  font-size:1.2rem;
+  font-size:1.3rem;
+ 
 }
 </style>

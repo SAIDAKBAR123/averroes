@@ -74,13 +74,34 @@
               <h1 class="title_beauty text-xs-center">Главные ценности</h1>
           </v-flex>
        <v-container>
-          <v-layout class="mt-2"  row wrap>
+          <v-layout  class="hidden-sm-and-down mt-2"  row wrap>
         
             <v-flex  xs12 md6  v-for="i in about" :key="i.iconic">
               <v-card  class="mx-auto" height="23rem" data-aos="zoom-out-down"   dark tile color="red darken-1">
                 <div  class="elevation-10" style="about_page">
                  
-                  <p class="text-xs-center title_crilic_big">{{i.heading}}</p>
+                  <p class="text-xs-center title_crilic_big ">{{i.heading}}</p>
+                  
+                </div>
+                <v-card-text>
+                   
+                  <div class=" photo text-xs-center">
+        <i id="icon_main" :class="i.iconic+' '"></i>
+                <p class="title_fonts  m-2 p-3">{{i.description}}</p>
+                  </div>
+                 </v-card-text>
+              </v-card>
+
+            </v-flex>
+        </v-layout>
+
+          <v-layout class="hidden-sm-and-up mt-2"  row wrap>
+        
+            <v-flex  xs12 md6  v-for="i in about" :key="i.iconic">
+              <v-card  class="mx-auto" data-aos="zoom-out-down"   dark tile color="red darken-1">
+                <div  class="elevation-10" style="about_page">
+                 
+                  <p class="text-xs-center title_crilic_big ">{{i.heading}}</p>
                   
                 </div>
                 <v-card-text>
@@ -160,7 +181,7 @@ export default {
           description:'Averroes не только предлагает отличный сервис для своих партнеров, но и фокусируется на саморазвитии людей внутри компании благодаря постоянному поощрению, мотивации и поддержке, чтобы они могли расти лично и становиться все более конкурентоспособными в глобальном рынке рабочей силы.'
         },
         {
-          iconic:'fas fa-book-open',
+          iconic:'far fa-lightbulb',
           color: 'blue-grey darken-1',
           icon: 'mdi-book-variant',
           timer:5300,

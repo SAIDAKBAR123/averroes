@@ -9,7 +9,7 @@
             class="white--text"
           >
     
-            <h1 class="white--text mb-2 title_font text-xs-center">События</h1>
+            <h1 class="white--text mb-2 title_font text-xs-center">Блог</h1>
             <div class="white--text headline mb-3 text-xs-center">
                  <v-breadcrumbs dark :items="items">
       <template v-slot:divider>
@@ -41,14 +41,16 @@
           <v-layout row wrap v-if="loading">
                 <v-flex xs12>
 <v-progress-linear indeterminate v-if="loading"></v-progress-linear>
-                    <h5 v-if="loading" class="text-xs-center secondary--text">Contnent are being ready, please wait...</h5>
+                    <h5 v-if="loading" class="text-xs-center secondary--text">Content are being ready, please wait...</h5>
                
                 </v-flex>
             </v-layout>
 
-        <v-layout col wrap v-else>
-        <v-flex xs12 sm6 offset-sm3 v-for="i in events" :key="i.title" >
-      <v-card class="mb-2 mt-2">
+        <v-layout class="mb-5" col wrap v-else>
+        <v-flex xs12 sm6 offset-sm3 v-for="i in events" 
+       
+        :key="i.title" >
+     <!-- <v-card class="mb-2 mt-2">
         <v-img
           :src="i.imageUrl"
           height="130"
@@ -76,24 +78,42 @@
            
           </v-card-text>
         </v-slide-y-transition>
-      </v-card>
+      </v-card>-->
+
+    
+      <v-layout row wrap>
+        <v-flex xs12 class="my-2" md4>
+        <v-img
+          :src="i.imageUrl"
+         
+          height="210px"
+        ></v-img>
+      </v-flex>
+      <v-flex xs12 md7>
+        <v-card class="my-2" height="210px">
+        <v-card-title primary-title>
+          <div>
+            <h3 class="headline mb-0" v-text="i.title.substring(0,40)+'...'"></h3>
+            <div v-html="i.description.substring(0,100)+'...'"> </div>
+          </div>
+        </v-card-title>
+
+        <v-card-actions>
+          <v-btn flat :to="'/event/'+i.id" color="red darken-1">Продолжить</v-btn><v-spacer></v-spacer><span class="p-2"><v-icon>access_time</v-icon></span><span class="my-2">{{i.date}}</span>
+        </v-card-actions>
+        </v-card>
+        </v-flex>
+     </v-layout>
+   
+
     </v-flex>
     <v-flex xs12 sm6 offset-sm3>
-<!-- <paginate
-    :page-count="20"
-    :page-range="3"
-    :margin-pages="2"
-    :click-handler="clickCallback"
-    :prev-text="'Prev'"
-    :next-text="'Next'"
-    :container-class="'pagination'"
-    :page-class="'page-item'">
-  </paginate>
-
-   <v-pagination
+  <div class="text-center">
+    <v-pagination
       v-model="page"
       :length="6"
-    ></v-pagination>-->
+    ></v-pagination>
+  </div>
     </v-flex>
         </v-layout>
          <v-sub-footer/>
@@ -101,9 +121,14 @@
 </template>
 
 <script>
+import Pagination from '../components/Shared/pagination/Pagination.vue'
 export default {
+  components:{
+   VuePagination: Pagination,
+  },
 data(){
   return {
+   
     show:null,
     page:1,
       items: [
@@ -113,32 +138,24 @@ data(){
           href: '/'
         },
         {
-          text: 'События',
+          text: 'Блог',
           disabled: true,
           href: 'events'
         }
       ]
   }
 },
+
 computed:{
-    events(){
+    events () {
         return this.$store.getters.loadedEvents 
     },
      loading(){
-           return this.$store.getters.loading
-       
+           return this.$store.getters.loading   
        },
-       page(){
-
-       }
-
-
    },
-   methods:{
-     clickCallback (pageNum) {
-      console.log(pageNum)
-    }
-   }
+
+
 
 }
 </script>

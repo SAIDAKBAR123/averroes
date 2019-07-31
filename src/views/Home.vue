@@ -42,7 +42,7 @@
           >
             <h1 class="title_beauty mt-5 text-xs-center" >Что вы знаете о нас?</h1>
            
-            <div class="mr-4 new_times font-weight-regular text-xs-center col"><p class="mx-5 px-5">Новые навыки и знания могут зажечь жизнь перемен. Averroes Consulting разработала и внедрила программы в сфере образования
+            <div class=" new_times font-weight-regular text-xs-center col"><p class="">Новые навыки и знания могут зажечь жизнь перемен. Averroes Consulting разработала и внедрила программы в сфере образования
   и экономические возможности, которые предоставляют изменяющие жизнь возможности тем, кто в них больше всего нуждается.</p>
              <hr class="grey darken-3 accent-2 mt-0 d-inline-block mx-auto" style="width: 7%;">
             </div>
@@ -137,7 +137,7 @@ VueInstagram,
         
             },
           {
-            icon:'fas fa-book-open',
+            icon:'far fa-lightbulb',
             color:'red darken-4',
             title:'Market Research',
             icon_color:'white',
